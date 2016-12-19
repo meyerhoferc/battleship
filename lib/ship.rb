@@ -3,6 +3,7 @@ class Ship
   def initialize(size)
     @size = size
     @placed = false
+    @hit = false
   end
 
   def placed?
@@ -10,7 +11,15 @@ class Ship
   end
 
   def place_on_board
-    @placed = true 
+    @placed = true
   end
+
+  def hit?
+    @hit
+  end
+
+  def hit
+    @hit = true
+  end 
 
 end

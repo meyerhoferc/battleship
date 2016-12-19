@@ -1,6 +1,4 @@
 require_relative 'test_helper'
-require 'minitest/autorun'
-require 'minitest/pride'
 require './lib/ship.rb'
 
 class ShipTest < Minitest::Test
@@ -31,8 +29,14 @@ class ShipTest < Minitest::Test
     assert ship.placed?
   end
 
-  def test_ship_knows_its_location
-    skip
+  def test_ship_not_hit_by_default
+    refute ship.hit?
+  end
+
+  def test_ship_knows_it_has_been_hit
+    refute ship.hit?
+    ship.hit
+    assert ship.hit?
   end
 
 end
