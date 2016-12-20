@@ -115,7 +115,7 @@ class Ledger
 
   def spots_available?(row_1, column_1, row_2, column_2)
     # check if currently available
-    if @board[row_1][column_1].nil? && @board[row_2][column_2].nil?
+    if @board[row_1][column_1] == 0 && @board[row_2][column_2] == 0
       true
     else
       # display error message and exit
