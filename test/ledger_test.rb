@@ -78,6 +78,7 @@ class LedgerTest < Minitest::Test
   end
 
   def test_cannot_insert_a_ship_with_invalid_coords
+    skip 
     coord_1 = "A1 A4"
     coord_2 = "B1 D3"
     coord_3 = "D1 F1"
