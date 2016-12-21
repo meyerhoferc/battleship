@@ -10,12 +10,14 @@ module CoordinateRules
                       "D1", "D2", "D3", "D4"]
 
   def self.coords_exist?(ledger, coords)
-    coord_1, coord_2 = coords
+    formatted_coords = ledger.format_pairs(coords)
+    coord_1, coord_2 = formatted_coords
     @available_coords.include?(coord_1)
     @available_coords.include?(coord_2)
   end
 
-  def self.ship_length_equals_coord_length(ship, formatted_coords)
+  def self.ship_length_equals_coord_length(ledger, ship, coords)
+    formatted_coords = ledger.format_pairs(coords)
     coord_1, coord_2 = formatted_coords
     difference = @available_coords.index(coord_1) - @available_coords.index(coord_2)
     if ship.size == 2

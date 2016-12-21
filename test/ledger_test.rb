@@ -1,15 +1,19 @@
 require_relative 'test_helper'
 require './lib/ledger.rb'
 require './lib/ship.rb'
+require './lib/coordinate_rules.rb'
 
 class LedgerTest < Minitest::Test
+  include CoordinateRules
   attr_reader :ledger,
               :ship_1,
-              :ship_2
+              :ship_2,
+              :ship_3
   def setup
     @ledger = Ledger.new
     @ship_1 = Ship.new(2)
     @ship_2 = Ship.new(3)
+    @ship_3 = Ship.new(3)
   end
 
   def test_it_is_a_ledger
@@ -39,74 +43,62 @@ class LedgerTest < Minitest::Test
     refute ledger.has_ship?(ship_2)
   end
 
+  def test_it_knows_it_does_have_a_ship
+    skip
+  end
+
   def test_formats_coords
     coords = "A1 A2"
     formatted_coords = ["A", "1", " ", "A", "2"]
-    assert_equal formatted_coords, ledger.format_coords("A1 A2")
-  end
-
-  def test_knows_if_coords_exist
-    coords = "B1 B2"
-    formatted_coords = ledger.format_coords(coords)
-    assert ledger.coords_exist?(formatted_coords)
-  end
-
-  def test_knows_coords_do_not_exist
-    skip # it knows, it just fucks with shit right now
-    coords = "E8 B9"
-    formatted_coords = ledger.format_coords(coords)
-    refute ledger.coords_exist?(formatted_coords)
-  end
-
-  def test_knows_if_coords_are_vertical
-    coords = "A1 A2"
-    formatted_coords = ledger.format_coords(coords)
-    refute ledger.vertical_coords?(formatted_coords)
-    assert ledger.horizontal_coords?(formatted_coords)
-  end
-
-  def test_knows_if_coords_are_horizontal
-    coords = "A1 B1"
-    formatted_coords = ledger.format_coords(coords)
-    assert ledger.vertical_coords?(formatted_coords)
-    refute ledger.horizontal_coords?(formatted_coords)
-  end
-
-  def test_it_knows_if_coords_are_valid
-    skip
-  end
-
-  def test_it_knows_if_coords_are_empty
-    skip
-  end
-
-  def test_it_knows_if_coords_not_empty
-    skip
+    assert_equal formatted_coords, ledger.format_letters("A1 A2")
   end
 
   def test_can_insert_a_ship_with_valid_coordinates
-    skip
+    coord_1 = "A1 A2"
+    coord_2 = "B1 B3"
+    coord_3 = "D1 B1"
 
     refute ledger.has_ship?(ship_1)
     refute ledger.has_ship?(ship_2)
+    refute ledger.has_ship?(ship_3)
+    refute ship_1.placed?
+    refute ship_2.placed?
+    refute ship_3.placed?
 
     ledger.insert(ship_1, coord_1)
     ledger.insert(ship_2, coord_2)
+    ledger.insert(ship_3, coord_3)
+    assert ship_1.placed?
+    assert ship_2.placed?
+    assert ship_3.placed?
 
     assert ledger.has_ship?(ship_1)
     assert ledger.has_ship?(ship_2)
+    assert ledger.has_ship?(ship_3)
   end
 
-  def test_can_not_insert_a_ship_without_valid_coordinates
-    skip
-  end
+  def test_cannot_insert_a_ship_with_invalid_coords
+    coord_1 = "A1 A4"
+    coord_2 = "B1 D3"
+    coord_3 = "D1 F1"
 
-  def test_insertion_coordinates_must_be_adjacent
-    skip
-  end
+    refute ledger.has_ship?(ship_1)
+    refute ledger.has_ship?(ship_2)
+    refute ledger.has_ship?(ship_3)
+    refute ship_1.placed?
+    refute ship_2.placed?
+    refute ship_3.placed?
 
-  def test_it_knows_it_does_have_a_ship
-    skip
+    ledger.insert(ship_1, coord_1)
+    ledger.insert(ship_2, coord_2)
+    ledger.insert(ship_3, coord_3)
+    refute ship_1.placed?
+    refute ship_2.placed?
+    refute ship_3.placed?
+
+    refute ledger.has_ship?(ship_1)
+    refute ledger.has_ship?(ship_2)
+    refute ledger.has_ship?(ship_3)
   end
 
   def test_it_knows_if_ship_is_not_hit

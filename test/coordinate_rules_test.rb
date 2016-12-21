@@ -17,14 +17,12 @@ class CoordinateRulesTest < Minitest::Test
 
   def test_knows_if_coords_exist_in_ledger
     coords = "B1 B2"
-    formatted_coords = ledger.format_pairs(coords)
-    assert CoordinateRules.coords_exist?(ledger, formatted_coords)
+    assert CoordinateRules.coords_exist?(ledger, coords)
   end
 
   def test_knows_coords_do_not_exist
     coords = "E8 B9"
-    formatted_coords = ledger.format_pairs(coords)
-    refute CoordinateRules.coords_exist?(ledger, formatted_coords)
+    refute CoordinateRules.coords_exist?(ledger, coords)
   end
 
   def test_it_knows_if_coords_match_ship_size
@@ -32,20 +30,16 @@ class CoordinateRulesTest < Minitest::Test
     coords_2 = "A2 B2"
     coords_3 = "A1 C1"
     coords_4 = "A2 D2"
-    formatted_coords_1 = ledger.format_pairs(coords_1)
-    formatted_coords_2 = ledger.format_pairs(coords_2)
-    formatted_coords_3 = ledger.format_pairs(coords_3)
-    formatted_coords_4 = ledger.format_pairs(coords_4)
 
-    assert CoordinateRules.ship_length_equals_coord_length(ship_1, formatted_coords_1)
-    assert CoordinateRules.ship_length_equals_coord_length(ship_1, formatted_coords_2)
-    refute CoordinateRules.ship_length_equals_coord_length(ship_1, formatted_coords_3)
-    refute CoordinateRules.ship_length_equals_coord_length(ship_1, formatted_coords_4)
+    assert CoordinateRules.ship_length_equals_coord_length(ledger, ship_1, coords_1)
+    assert CoordinateRules.ship_length_equals_coord_length(ledger, ship_1, coords_2)
+    refute CoordinateRules.ship_length_equals_coord_length(ledger, ship_1, coords_3)
+    refute CoordinateRules.ship_length_equals_coord_length(ledger, ship_1, coords_4)
 
-    refute CoordinateRules.ship_length_equals_coord_length(ship_2, formatted_coords_1)
-    refute CoordinateRules.ship_length_equals_coord_length(ship_2, formatted_coords_2)
-    assert CoordinateRules.ship_length_equals_coord_length(ship_2, formatted_coords_3)
-    refute CoordinateRules.ship_length_equals_coord_length(ship_2, formatted_coords_4)
+    refute CoordinateRules.ship_length_equals_coord_length(ledger, ship_2, coords_1)
+    refute CoordinateRules.ship_length_equals_coord_length(ledger, ship_2, coords_2)
+    assert CoordinateRules.ship_length_equals_coord_length(ledger, ship_2, coords_3)
+    refute CoordinateRules.ship_length_equals_coord_length(ledger, ship_2, coords_4)
   end
 
   def test_it_knows_if_coords_are_empty
