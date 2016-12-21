@@ -3,7 +3,7 @@ class Ship
   def initialize(size)
     @size = size
     @placed = false
-    @hit = false
+    @hit_counter = 0
   end
 
   def placed?
@@ -14,12 +14,12 @@ class Ship
     @placed = true
   end
 
-  def hit?
-    @hit
+  def times_hit
+    @hit_counter
   end
 
   def hit
-    @hit = true
-  end 
+    @hit_counter += 1
+  end
 
 end

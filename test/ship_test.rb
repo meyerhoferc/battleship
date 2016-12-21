@@ -30,13 +30,13 @@ class ShipTest < Minitest::Test
   end
 
   def test_ship_not_hit_by_default
-    refute ship.hit?
+    assert_equal 0, ship.times_hit
   end
 
   def test_ship_knows_it_has_been_hit
-    refute ship.hit?
+    assert_equal 0, ship.times_hit
     ship.hit
-    assert ship.hit?
+    assert_equal 1, ship.times_hit
   end
 
 end
