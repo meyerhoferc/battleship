@@ -1,5 +1,6 @@
 require './lib/ship.rb'
 require './lib/messages.rb'
+# require './lib/coordinate_rules.rb'
 require 'pry'
 
 class Ledger
@@ -20,7 +21,11 @@ class Ledger
     @board.has_value?(ship)
   end
 
-  def format_coords(coords)
+  def format_pairs(coords)
+    coords.split
+  end
+
+  def format_letters(coords)
     coords.chars
   end
 
@@ -56,29 +61,29 @@ class Ledger
     end
   end
 
-  def coords_exist?(formatted_coords)
-    row_1 = formatted_coords[0]
-    column_1 = formatted_coords[1]
-    row_2 = formatted_coords[3]
-    column_2 = formatted_coords[4]
-    # checking if row exists
-    if @board.has_key?(row_1) && @board.has_key?(row_2)
-      true
-    else
-      false
-      # abort("\nfuck off motherfuckers")
-       # display error message from message class and exit, reprompt
-    end
-    # check if column exists for that row
-    if @board[row_1].count >= (column_1.to_f - 1) &&
-      @board[row_2].count >= (column_2.to_f - 1)
-      true
-    else
-      false
-      # abort("\nfuck off motherfuckers")
-      # display error message from message class and exit, reprompt
-    end
-  end
+  # def coords_exist?(formatted_coords)
+  #   row_1 = formatted_coords[0]
+  #   column_1 = formatted_coords[1]
+  #   row_2 = formatted_coords[3]
+  #   column_2 = formatted_coords[4]
+  #   # checking if row exists
+  #   if @board.has_key?(row_1) && @board.has_key?(row_2)
+  #     true
+  #   else
+  #     false
+  #     # abort("\nfuck off motherfuckers")
+  #      # display error message from message class and exit, reprompt
+  #   end
+  #   # check if column exists for that row
+  #   if @board[row_1].count >= (column_1.to_f - 1) &&
+  #     @board[row_2].count >= (column_2.to_f - 1)
+  #     true
+  #   else
+  #     false
+  #     # abort("\nfuck off motherfuckers")
+  #     # display error message from message class and exit, reprompt
+  #   end
+  # end
 
   def valid_and_available_coords?(ship, formatted_coords)
     # might break up into #valid_coords? && #available_coords?
@@ -96,20 +101,6 @@ class Ledger
     else
       spots_available?(row_1, column_1, row_2, column_2)
       coordinates_adjacent?(row_1, column_1, row_2, column_2)      # ship size only 2
-    end
-  end
-
-  def ship_length_equals_coord_length(ship, coords)
-    ship_length = ship.size
-    row_1 = formatted_coords[0]
-    column_1 = formatted_coords[1]
-    row_2 = formatted_coords[3]
-    column_2 = formatted_coords[4]
-    if (column_1 - column_2).abs == ship_length - 1 ||
-      (row_1.codepoints.first - row_2.codepoints.first).abs == ship_length - 1
-      true
-    else
-      false
     end
   end
 

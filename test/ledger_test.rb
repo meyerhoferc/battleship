@@ -21,7 +21,7 @@ class LedgerTest < Minitest::Test
     assert_equal 1, ledger.difficulty
   end
 
-  def test_its_nil_by_default
+  def test_rows_zero_by_default
     assert_equal ledger.board['.'], ['1', '2', '3', '4']
     assert_equal 0, ledger.board['A'][0]
     assert_equal 0, ledger.board['B'][1]
@@ -102,7 +102,7 @@ class LedgerTest < Minitest::Test
   end
 
   def test_insertion_coordinates_must_be_adjacent
-
+    skip
   end
 
   def test_it_knows_it_does_have_a_ship
