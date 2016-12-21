@@ -20,7 +20,7 @@ class Opponent
     @possible_ship_placements = []
     @possible_firing_locations = []
     update_possible_firing_locations
-    place_ships_on_board
+    # place_ships_on_board
   end
 
   def update_possible_firing_locations
@@ -79,11 +79,8 @@ class Opponent
   def place_ships_on_board(board = @ship_board)
     @fleet.each do |ship|
       pick_coordinate_set
-      coords = @coord_1 + " " @coord_2
+      coords = @coord_1 + " " + @coord_2
       board.insert(ship, coords)
     end
   end
-
-
-
 end
