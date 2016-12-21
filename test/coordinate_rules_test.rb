@@ -82,13 +82,21 @@ class CoordinateRulesTest < Minitest::Test
     refute CoordinateRules.coordinates_adjacent?(ledger, coords_4)
   end
 
-  def test_middle_coordinate_available_for_size_3_ship
+  def test_middle_coordinate_available_for_size_3_vertical_ship
     coords = "B3 D3"
-    ledger = Ledger.new
-    # assert CoordinateRules.all_three_empty?(ledger, coords)
+    assert CoordinateRules.all_three_empty?(ledger, coords)
     ledger.board["B"][2] = ship_2
     ledger.board["C"][2] = ship_2
     ledger.board["D"][2] = ship_2
+    refute  CoordinateRules.all_three_empty?(ledger, coords)
+  end
+
+  def test_middle_coordinate_available_for_size_3_horizontal_ship
+    coords = "A1 A3"
+    assert CoordinateRules.all_three_empty?(ledger, coords)
+    ledger.board["A"][0] = ship_2
+    ledger.board["A"][1] = ship_2
+    ledger.board["A"][2] = ship_2
     refute  CoordinateRules.all_three_empty?(ledger, coords)
   end
 end
