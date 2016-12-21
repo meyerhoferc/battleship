@@ -27,14 +27,22 @@ module Messages
   end
 
   def self.threaten
-    "[Gretchen]: I WILL CRUSH YOU....with my ships."
+    "\n[Gretchen]: I WILL CRUSH YOU....with my ships."
   end
 
   def self.admits_defeat
-    "[Gretchen]: Well played, Anklesmiter. You have bested me."
+    "\n[Gretchen]: Well played, Anklesmiter. You have bested me."
   end
 
   def self.admits_victory
-    "[Gretchen]: Well played, Anklesmiter. You cannot defeat the Light."
+    "\n[Gretchen]: Well played, Anklesmiter. You cannot defeat the Light."
+  end
+
+  def self.finished_entering_ships
+    "\n[Gretchen]: I have laid out my ships on the grid.
+    \nYou now need to layout your two ships.
+    \nThe first is two units long and the second is three units long.
+    \nThe grid has A1 at the top left and D4 at the bottom right.
+    \nEnter the squares for the two-unit ship:\n"
   end
 end

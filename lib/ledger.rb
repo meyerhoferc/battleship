@@ -18,6 +18,21 @@ class Ledger
     end
   end
 
+  def print_board
+    border = '============'
+    keys = @board.keys
+    columns = @board[keys[0]]
+    printed_board = """
+    #{border}
+    #{keys[0]} #{columns[0]} #{columns[1]} #{columns[2]} #{columns[3]}
+    #{keys[1]}
+    #{keys[2]}
+    #{keys[3]}
+    #{keys[4]}
+    #{border}
+    """
+  end
+
   def has_ship?(ship)
     @board.values.any? { |value| value.include?(ship) }
   end

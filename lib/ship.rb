@@ -4,6 +4,7 @@ class Ship
     @size = size
     @placed = false
     @hit_counter = 0
+    @sunk = false
   end
 
   def placed?
@@ -20,6 +21,13 @@ class Ship
 
   def hit
     @hit_counter += 1
+    if @hit_counter == @size
+      @sunk = true
+    end 
+  end
+
+  def sunk?
+    @sunk
   end
 
 end

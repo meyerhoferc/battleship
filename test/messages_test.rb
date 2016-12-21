@@ -24,7 +24,6 @@ class MessagesTest < Minitest::Test
     \n\t3. Ship orientation must be horizontal or vertical, never diagonal.
     \n\t4. Ship coordinates must match the size of the ship.
     \n\t5. Ship coordinates must coorespond to existing rows and columns in the board."""
-
     assert_equal message, Messages.instructions
   end
 
@@ -37,17 +36,27 @@ class MessagesTest < Minitest::Test
   end
 
   def test_opponent_threatens
-    message = "[Gretchen]: I WILL CRUSH YOU....with my ships."
+    message = "\n[Gretchen]: I WILL CRUSH YOU....with my ships."
     assert_equal message, Messages.threaten
   end
 
   def test_admits_defeat
-    message = "[Gretchen]: Well played, Anklesmiter. You have bested me."
+    message = "\n[Gretchen]: Well played, Anklesmiter. You have bested me."
     assert_equal message, Messages.admits_defeat
   end
 
   def test_admits_victory
-    message = "[Gretchen]: Well played, Anklesmiter. You cannot defeat the Light."
+    message = "\n[Gretchen]: Well played, Anklesmiter. You cannot defeat the Light."
     assert_equal message, Messages.admits_victory
+  end
+
+  def test_says_when_finished_enterting_ships_onto_board
+    message = "\n[Gretchen]: I have laid out my ships on the grid.
+    \nYou now need to layout your two ships.
+    \nThe first is two units long and the second is three units long.
+    \nThe grid has A1 at the top left and D4 at the bottom right.
+    \nEnter the squares for the two-unit ship:\n"
+
+    assert_equal message, Messages.finished_entering_ships
   end
 end
