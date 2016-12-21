@@ -1,5 +1,6 @@
 require './lib/ledger.rb'
 require './lib/ship.rb'
+require 'pry'
 
 module CoordinateRules
 
@@ -18,25 +19,44 @@ module CoordinateRules
     coord_1, coord_2 = formatted_coords
     difference = @available_coords.index(coord_1) - @available_coords.index(coord_2)
     if ship.size == 2
-      if difference.abs == 1 || difference.abs == 4
-        true
-      else
-        false
-      end
+      difference.abs == 1 || difference.abs == 4 ? true : false
     else
-      if difference.abs == 2 || difference.abs == 8
-        true
-      else
-        false
-      end
+      difference.abs == 2 || difference.abs == 8 ? true : false
     end
   end
 
   def self.coords_empty?(ledger, coords)
     formatted_coords = ledger.format_letters(coords)
     row_1, column_1, space, row_2, column_2 = formatted_coords
-    ledger.board[row_1][column_1.to_i] == 0 ? true : false
-    ledger.board[row_2][column_2.to_i] == 0 ? true : false
+    ledger.board[row_1][column_1.to_i - 1] == 0 ? true : false
+    ledger.board[row_2][column_2.to_i - 1] == 0 ? true : false
+  end
+
+  def self.coordinates_adjacent?(ledger, coords)
+    formatted_coords = ledger.format_letters(coords)
+    row_1, column_1, space, row_2, column_2 = formatted_coords
+    row_1 == row_2 || column_1 == column_2 ? true : false
+  end
+
+  def self.all_three_empty?(ledger, coords)
+    formatted_coords = ledger.format_letters(coords)
+    row_1, column_1, space, row_2, column_2 = formatted_coords
+    # finding middle coordinate
+    # will be different for horizontal or vertical coords
+    if row_1 == row_2 # horizontal
+      middle_row = row_1
+      column_1.to_i > column_2.to_i ? middle_column = (column_2.to_i) : middle_column = (column_1.to_i)
+    elsif column_1 == column_2 # vertical
+      middle_column = column_1.to_i - 1
+      row_1_c = row_1.codepoints.first
+      row_2_c = row_2.codepoints.first
+      row_1_c > row_2_c ? middle_row = [row_2_c + 1].pack("U*") : middle_row = [row_1_c + 1].pack("U*")
+    else
+      # error message
+    end
+    ledger.board[row_1][column_1.to_i - 1] == 0 ? true : false
+    ledger.board[row_2][column_2.to_i - 1] == 0 ? true : false
+    ledger.board[middle_row][middle_column] == 0 ? true : false
   end
 
 end

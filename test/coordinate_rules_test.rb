@@ -2,6 +2,7 @@ require_relative 'test_helper'
 require './lib/ledger.rb'
 require './lib/ship.rb'
 require './lib/coordinate_rules.rb'
+require 'pry'
 
 class CoordinateRulesTest < Minitest::Test
   include CoordinateRules
@@ -24,22 +25,6 @@ class CoordinateRulesTest < Minitest::Test
     coords = "E8 B9"
     formatted_coords = ledger.format_pairs(coords)
     refute CoordinateRules.coords_exist?(ledger, formatted_coords)
-  end
-
-  def test_knows_if_coords_are_vertical
-    skip
-    coords = "A1 A2"
-    formatted_coords = ledger.format_pairs(coords)
-    refute ledger.vertical_coords?(formatted_coords)
-    assert ledger.horizontal_coords?(formatted_coords)
-  end
-
-  def test_knows_if_coords_are_horizontal
-    skip
-    coords = "A1 B1"
-    formatted_coords = ledger.format_pairs(coords)
-    assert ledger.vertical_coords?(formatted_coords)
-    refute ledger.horizontal_coords?(formatted_coords)
   end
 
   def test_it_knows_if_coords_match_ship_size
@@ -72,6 +57,19 @@ class CoordinateRulesTest < Minitest::Test
     assert CoordinateRules.coords_empty?(ledger, coords_3)
   end
 
+  def test_it_knows_if_coords_not_empty
+    coords_1 = "A1 B1"
+    coords_2 = "B3 D3"
+    ledger_2 = Ledger.new
+    ledger_2.board["A"][0] = ship_1
+    ledger_2.board["B"][0] = ship_1
+    ledger_2.board["B"][2] = ship_2
+    ledger_2.board["D"][2] = ship_2
+
+    refute CoordinateRules.coords_empty?(ledger_2, coords_1)
+    refute CoordinateRules.coords_empty?(ledger_2, coords_2)
+  end
+
   def test_knows_if_coords_are_adjacent
     coords_1 = "A1 B1"
     coords_2 = "A2 B2"
@@ -82,44 +80,15 @@ class CoordinateRulesTest < Minitest::Test
     assert CoordinateRules.coordinates_adjacent?(ledger, coords_2)
     refute CoordinateRules.coordinates_adjacent?(ledger, coords_3)
     refute CoordinateRules.coordinates_adjacent?(ledger, coords_4)
-
   end
 
-  def test_can_insert_a_ship_with_valid_coordinates
-    skip
-
-    refute ledger.has_ship?(ship_1)
-    refute ledger.has_ship?(ship_2)
-
-    ledger.insert(ship_1, coord_1)
-    ledger.insert(ship_2, coord_2)
-
-    assert ledger.has_ship?(ship_1)
-    assert ledger.has_ship?(ship_2)
+  def test_middle_coordinate_available_for_size_3_ship
+    coords = "B3 D3"
+    ledger = Ledger.new
+    # assert CoordinateRules.all_three_empty?(ledger, coords)
+    ledger.board["B"][2] = ship_2
+    ledger.board["C"][2] = ship_2
+    ledger.board["D"][2] = ship_2
+    refute  CoordinateRules.all_three_empty?(ledger, coords)
   end
-
-  def test_it_knows_if_coords_not_empty
-    skip
-  end
-
-  def test_can_not_insert_a_ship_with_invalid_coordinates
-    skip
-  end
-
-  def test_insertion_coordinates_must_be_adjacent
-    skip
-  end
-
-  def test_it_knows_it_does_have_a_ship
-    skip
-  end
-
-  def test_it_knows_if_ship_is_not_hit
-    skip
-  end
-
-  def test_it_knows_if_ship_is_hit
-    skip
-  end
-
 end

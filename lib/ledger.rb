@@ -104,34 +104,6 @@ class Ledger
     end
   end
 
-  def spots_available?(row_1, column_1, row_2, column_2)
-    # check if currently available
-    if @board[row_1][column_1] == 0 && @board[row_2][column_2] == 0
-      true
-    else
-      # display error message and exit
-    end
-  end
-
-  def coordinates_adjacent?(row_1, column_1, row_2, column_2)
-    if row_1 == row_2      # horizontal
-      # check if column1 & col2 are within 1 index of each other
-      if (column_1 - column_2).abs == 1
-        true
-      else
-        # display error message, exit, reprompt for coords
-      end
-    elsif column_1 == column_2      # veritcal
-      if (row_1.codepoints.first - row_2.codepoints.first).abs == 1
-        true
-      else
-        # display error message, exit, reprompt for coords
-      end
-    else
-      # display error message from Message class and exit, reprompt
-    end
-  end
-
   def middle_spot_available?(row_1, column_1, row_2, column_2)
 
   end
