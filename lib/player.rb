@@ -28,5 +28,4 @@ class Player
     # talks to opponent board
     # will show out shots fired
   end
-
 end
