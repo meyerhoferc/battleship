@@ -43,8 +43,6 @@ module CoordinateRules
   def self.all_three_empty?(ledger, coords)
     formatted_coords = ledger.format_letters(coords)
     row_1, column_1, space, row_2, column_2 = formatted_coords
-    # finding middle coordinate
-    # will be different for horizontal or vertical coords
     if row_1 == row_2 # horizontal
       middle_row = row_1
       column_1.to_i > column_2.to_i ? middle_column = (column_2.to_i) : middle_column = (column_1.to_i)
@@ -59,6 +57,13 @@ module CoordinateRules
     ledger.board[row_1][column_1.to_i - 1] == 0 ? true : false
     ledger.board[row_2][column_2.to_i - 1] == 0 ? true : false
     ledger.board[middle_row][middle_column] == 0 ? true : false
+  end
+
+  def self.coords_nil?(ledger, coords)
+    formatted_coords = ledger.format_pairs(coords)
+    coord_1, coord_2 = formatted_coords
+    @available_coords.index(coord_1).nil? ? true : false
+    @available_coords.index(coord_2).nil? ? true : false
   end
 
 end

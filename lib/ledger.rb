@@ -137,5 +137,4 @@ class Ledger
     row, column = formatted_coord
     @board[row][column.to_i - 1] = "H"
   end
-
 end

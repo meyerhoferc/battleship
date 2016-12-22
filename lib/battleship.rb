@@ -43,14 +43,14 @@ class BattleShip
   def player_ship_placement
     if player.all_ships_sunk? == false && player.fleet[0].placed? == false
       puts Messages.finished_entering_ships
-      puts player.ship_board.print_board
+      puts player.shots_fired.print_board
       coords = gets.upcase.chomp
       ship_1 = player.fleet[0]
       player.place_ship(ship_1, coords)
       player_ship_placement
     elsif player.all_ships_sunk? == false && player.fleet[0].placed? == true && player.fleet[1].placed? == false
       puts Messages.second_ship
-      puts player.ship_board.print_board
+      puts player.shots_fired.print_board
       coords = gets.upcase.chomp
       ship_2 = player.fleet[1]
       player.place_ship(ship_2, coords)

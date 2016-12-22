@@ -43,10 +43,6 @@ class LedgerTest < Minitest::Test
     refute ledger.has_ship?(ship_2)
   end
 
-  def test_it_knows_it_does_have_a_ship
-    skip
-  end
-
   def test_formats_coords
     coords = "A1 A2"
     formatted_coords = ["A", "1", " ", "A", "2"]
@@ -185,7 +181,7 @@ class LedgerTest < Minitest::Test
   end
 
   def test_can_print_board_with_hits_and_misses
-    skip 
+    skip
     coord_1 = "A1"
     coord_2 = "D4"
     coord_3 = "B3"

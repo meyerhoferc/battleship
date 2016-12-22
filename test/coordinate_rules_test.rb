@@ -93,4 +93,15 @@ class CoordinateRulesTest < Minitest::Test
     ledger.board["A"][2] = ship_2
     refute  CoordinateRules.all_three_empty?(ledger, coords)
   end
+
+  def test_coords_nil?
+    coords_1 = "A1 B1"
+    coords_2 = "A2 B2"
+    coords_3 = "A8 B9"
+    coords_4 = "D2 F2"
+    refute CoordinateRules.coords_nil?(ledger, coords_1)
+    refute CoordinateRules.coords_nil?(ledger, coords_2)
+    assert CoordinateRules.coords_nil?(ledger, coords_3)
+    assert CoordinateRules.coords_nil?(ledger, coords_4)
+  end
 end
