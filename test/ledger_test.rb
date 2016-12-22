@@ -117,6 +117,7 @@ class LedgerTest < Minitest::Test
 
 
   def test_it_knows_if_ship_is_not_hit
+    # not sure if this belongs here
     coord_1 = "A1 A2"
     coord_2 = "B1 B3"
     coord_3 = "D1 B1"
@@ -126,8 +127,8 @@ class LedgerTest < Minitest::Test
     assert ship_1.placed?
     assert ship_2.placed?
     assert ship_3.placed?
-
-    # FINISH HERE 
+    refute ships.hit?
+    # FINISH HERE
   end
 
   def test_it_knows_if_ship_is_hit

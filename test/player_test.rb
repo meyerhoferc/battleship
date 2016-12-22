@@ -89,6 +89,7 @@ class PlayerTest < Minitest::Test
 
 
   def test_can_make_a_shot_at_opponent
+    skip 
     coords = "C2"
     assert player.fire(coords)
   end
