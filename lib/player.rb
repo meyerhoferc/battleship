@@ -10,7 +10,9 @@ class Player
               :shots_fired,
               :collection,
               :fleet,
-              :shots
+              :shots,
+              :fired_coords
+
   def initialize
     @ship_board = Ledger.new
     @shots_fired = Ledger.new
@@ -19,6 +21,7 @@ class Player
     @ship_2 = Ship.new(3)
     @fleet = [@ship_1, @ship_2]
     @shots = 0
+    @fired_coords = []
   end
 
   def place_ship(ship, coords, board = @ship_board)
@@ -27,11 +30,18 @@ class Player
 
   def fire(board, coords)
     @shots += 1
-    # talks to opponent board
-    # will show out shots fired
+    if fired_already?(coords) || FiringRules.coords_exist?(coords) == false
+      false 
+    else
+      @fired_coords << coords
+    end
   end
 
   def all_ships_sunk?
     @ship_1.sunk? && @ship_2.sunk? ? true : false
+  end
+
+  def fired_already?(coord)
+    @fired_coords.include?(coord)
   end
 end

@@ -103,6 +103,7 @@ class LedgerTest < Minitest::Test
   end
 
   def test_can_print_empty_board
+    skip
     board = """
     ============
     . 1 2 3 4
@@ -116,25 +117,100 @@ class LedgerTest < Minitest::Test
   end
 
 
-  def test_it_knows_if_ship_is_not_hit
-    # not sure if this belongs here
+  def test_it_knows_if_ship_at_coordinate
     coord_1 = "A1 A2"
     coord_2 = "B1 B3"
     coord_3 = "D1 B1"
+
     ledger.insert(ship_1, coord_1)
     ledger.insert(ship_2, coord_2)
     ledger.insert(ship_3, coord_3)
     assert ship_1.placed?
     assert ship_2.placed?
     assert ship_3.placed?
-    # FINISH HERE
+
+    assert_equal 0, ship_1.times_hit
+    assert_equal 0, ship_2.times_hit
+    assert_equal 0, ship_3.times_hit
+
+    assert ledger.contains_ship?("A1")
+    assert ledger.contains_ship?("A2")
+    assert ledger.contains_ship?("B1")
+    assert ledger.contains_ship?("B3")
+    assert ledger.contains_ship?("D1")
+    assert ledger.contains_ship?("C1")
+    assert ledger.contains_ship?("B1")
+    refute ledger.contains_ship?("B4")
+    refute ledger.contains_ship?("A4")
+    refute ledger.contains_ship?("C4")
+    refute ledger.contains_ship?("D4")
   end
 
-  def test_it_knows_if_ship_is_hit
-    skip
+  def test_stores_strike
+    coord_1 = "A1"
+    coord_2 = "D4"
+    coord_3 = "B3"
+    coord_4 = "C2"
+    coord_5 = "C3"
+    coord_6 = "C4"
+    coord_7 = "A2"
+    coord_8 = "B2"
+
+    refute ledger.coordinate_struck?(coord_1)
+    refute ledger.coordinate_struck?(coord_2)
+    refute ledger.coordinate_struck?(coord_3)
+    refute ledger.coordinate_struck?(coord_4)
+    refute ledger.coordinate_struck?(coord_5)
+    refute ledger.coordinate_struck?(coord_6)
+    refute ledger.coordinate_struck?(coord_7)
+    refute ledger.coordinate_struck?(coord_8)
+
+    ledger.mark_as_missed(coord_1)
+    ledger.mark_as_missed(coord_2)
+    ledger.mark_as_missed(coord_3)
+    ledger.mark_as_missed(coord_4)
+    ledger.mark_as_hit(coord_5)
+    ledger.mark_as_hit(coord_6)
+    ledger.mark_as_hit(coord_7)
+    ledger.mark_as_hit(coord_8)
+
+    assert ledger.coordinate_struck?(coord_1)
+    assert ledger.coordinate_struck?(coord_2)
+    assert ledger.coordinate_struck?(coord_3)
+    assert ledger.coordinate_struck?(coord_4)
+    assert ledger.coordinate_struck?(coord_5)
+    assert ledger.coordinate_struck?(coord_6)
+    assert ledger.coordinate_struck?(coord_7)
+    assert ledger.coordinate_struck?(coord_8)
   end
 
   def test_can_print_board_with_hits_and_misses
-    skip
+    skip 
+    coord_1 = "A1"
+    coord_2 = "D4"
+    coord_3 = "B3"
+    coord_4 = "C2"
+    coord_5 = "C3"
+    coord_6 = "C4"
+    coord_7 = "A2"
+    coord_8 = "B2"
+    ledger.mark_as_missed(coord_1)
+    ledger.mark_as_missed(coord_2)
+    ledger.mark_as_missed(coord_3)
+    ledger.mark_as_missed(coord_4)
+    ledger.mark_as_hit(coord_5)
+    ledger.mark_as_hit(coord_6)
+    ledger.mark_as_hit(coord_7)
+    ledger.mark_as_hit(coord_8)
+    board = """
+    ============
+    . 1 2 3 4
+    A M H
+    B   H M
+    C   M H H
+    D       M
+    ============
+    """
+    assert_equal board, ledger.print_board
   end
 end

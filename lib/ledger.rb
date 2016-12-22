@@ -19,16 +19,48 @@ class Ledger
   end
 
   def print_board
-    border = '============'
     keys = @board.keys
     columns = @board[keys[0]]
+    row_1 = @board[keys[1]]
+    row_2 = @board[keys[2]]
+    row_3 = @board[keys[3]]
+    row_4 = @board[keys[4]]
+    row_1_new = []
+    row_2_new = []
+    row_3_new = []
+    row_4_new = []
+    row_1.each do |i|
+      if i == 0
+        i = " "
+      end
+      row_1_new << i
+    end
+    row_2.each do |i|
+      if i == 0
+        i = " "
+      end
+      row_2_new << i
+    end
+    row_3.each do |i|
+      if i == 0
+        i = " "
+      end
+      row_3_new << i
+    end
+    row_4.each do |i|
+      if i == 0
+        i = " "
+      end
+      row_4_new << i
+    end
+    border = '============'
     printed_board = """
     #{border}
     #{keys[0]} #{columns[0]} #{columns[1]} #{columns[2]} #{columns[3]}
-    #{keys[1]}
-    #{keys[2]}
-    #{keys[3]}
-    #{keys[4]}
+    #{keys[1]} #{row_1_new[0]} #{row_1_new[1]} #{row_1_new[2]} #{row_1_new[3]} #{row_1_new[4]}
+    #{keys[2]} #{row_2_new[0]} #{row_2_new[1]} #{row_2_new[2]} #{row_2_new[3]} #{row_2_new[4]}
+    #{keys[3]} #{row_3_new[0]} #{row_3_new[1]} #{row_3_new[2]} #{row_3_new[3]} #{row_3_new[4]}
+    #{keys[4]} #{row_4_new[0]} #{row_4_new[1]} #{row_4_new[2]} #{row_4_new[3]} #{row_4_new[4]}
     #{border}
     """
   end
@@ -81,7 +113,29 @@ class Ledger
     end
     @board[middle_row][middle_column] = ship
   end
-  #
-  # def all_ships_sunk?
-  # end 
+
+  def contains_ship?(coord)
+    formatted_coord = format_letters(coord)
+    row, column = formatted_coord
+    @board[row][column.to_i - 1] == 0 ? false : true
+  end
+
+  def coordinate_struck?(coord)
+    formatted_coord = format_letters(coord)
+    row, column = formatted_coord
+    @board[row][column.to_i - 1] == 0 ? false : true
+  end
+
+  def mark_as_missed(coord)
+    formatted_coord = format_letters(coord)
+    row, column = formatted_coord
+    @board[row][column.to_i - 1] = "M"
+  end
+
+  def mark_as_hit(coord)
+    formatted_coord = format_letters(coord)
+    row, column = formatted_coord
+    @board[row][column.to_i - 1] = "H"
+  end
+
 end

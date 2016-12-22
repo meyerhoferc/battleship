@@ -108,10 +108,48 @@ class PlayerTest < Minitest::Test
     assert player.all_ships_sunk?
   end
 
+  def test_when_fires_adds_coords_to_array
+    coords = "B3"
+    assert_equal [], player.fired_coords
+    player.fire(opponent.ship_board, coords)
+    assert_equal 1, player.fired_coords.count
+  end
+
+  def test_knows_if_has_already_fired_at_a_coordinate
+    coord_1 = "A1"
+    coord_2 = "B3"
+    coord_3 = "D4"
+    player.fire(opponent.ship_board, coord_1)
+    player.fire(opponent.ship_board, coord_2)
+    assert player.fired_already?(coord_1)
+    assert player.fired_already?(coord_2)
+    refute player.fired_already?(coord_3)
+  end
+
+  def test_cannot_fire_if_already_fired_at_coordinate
+    coord_1 = "A1"
+    coord_2 = "B3"
+    coord_3 = "D4"
+    assert player.fire(opponent.ship_board, coord_1)
+    assert player.fire(opponent.ship_board, coord_2)
+    refute player.fire(opponent.ship_board, coord_1)
+    refute player.fire(opponent.ship_board, coord_2)
+  end
+
+  def test_cannot_fire_if_coordinate_nonsensical
+    coord_1 = "Aaaa"
+    coord_2 = "B189"
+    coord_3 = "D9933jfkdls"
+    refute player.fire(opponent.ship_board, coord_1)
+    refute player.fire(opponent.ship_board, coord_2)
+    refute player.fire(opponent.ship_board, coord_3)
+  end
 
   def test_can_make_a_shot_at_opponent
+    opponent.place_ships_on_board
     coords = "C2"
     assert player.fire(opponent.ship_board, coords)
+    assert player.shots_fired.board.contains?("H") || player.shots_fired.board.contains?("M")
   end
 
 
