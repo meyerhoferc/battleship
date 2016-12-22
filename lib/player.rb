@@ -1,9 +1,11 @@
 require './lib/ship.rb'
 require './lib/ledger.rb'
 require './lib/messages.rb'
+require './lib/firing_rules.rb'
 require 'pry'
 
 class Player
+  include FiringRules
   attr_reader :ship_board,
               :shots_fired,
               :collection,
@@ -23,13 +25,13 @@ class Player
     board.insert(ship, coords)
   end
 
-  def fire(coords)
+  def fire(board, coords)
     @shots += 1
     # talks to opponent board
     # will show out shots fired
   end
 
   def all_ships_sunk?
-    @ship_1.sunk? && @ship_2.sunk? ? true : false 
+    @ship_1.sunk? && @ship_2.sunk? ? true : false
   end
 end

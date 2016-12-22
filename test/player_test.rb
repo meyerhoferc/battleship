@@ -2,15 +2,18 @@ require_relative 'test_helper'
 require './lib/ledger.rb'
 require './lib/ship.rb'
 require './lib/player.rb'
+require './lib/opponent.rb'
 
 class PlayerTest < Minitest::Test
   attr_reader :player,
               :ship_board,
-              :shots_fired
+              :shots_fired,
+              :opponent
   def setup
     @player = Player.new
     @ship_board = Ledger.new
     @shots_fired = Ledger.new
+    @opponent = Opponent.new
   end
 
   def test_it_is_a_player
@@ -75,15 +78,15 @@ class PlayerTest < Minitest::Test
 
   def test_shots_increases_when_firing
     coords = "A1"
-    player.fire(coords)
+    player.fire(opponent.ship_board, coords)
     assert_equal 1, player.shots
-    player.fire(coords)
+    player.fire(opponent.ship_board, coords)
     assert_equal 2, player.shots
-    player.fire(coords)
+    player.fire(opponent.ship_board, coords)
     assert_equal 3, player.shots
-    player.fire(coords)
+    player.fire(opponent.ship_board, coords)
     assert_equal 4, player.shots
-    player.fire(coords)
+    player.fire(opponent.ship_board, coords)
     assert_equal 5, player.shots
   end
 
@@ -107,9 +110,8 @@ class PlayerTest < Minitest::Test
 
 
   def test_can_make_a_shot_at_opponent
-    skip
     coords = "C2"
-    assert player.fire(coords)
+    assert player.fire(opponent.ship_board, coords)
   end
 
 

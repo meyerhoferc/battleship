@@ -3,9 +3,11 @@ require './lib/ship.rb'
 require './lib/player.rb'
 require './lib/opponent.rb'
 require './lib/messages.rb'
+require './lib/firing_rules.rb'
 
 class BattleShip
   include Messages
+  include FiringRules
   attr_reader :opponent,
               :player
   def initialize
@@ -59,7 +61,22 @@ class BattleShip
   end
 
   def shot_sequence
-    
+    if opponent.all_ships_sunk? == false && player.all_ships_sunk? == false
+      opponent.fire(player.ship_board)
+      # hit or miss message maybe in this method?
+      coords = gets.upcase.chomp
+      player.fire(opponent.ship_board, coords) #hot sure which class this goes in
+      # hit or miss message
+      # display shots fired board
+      # player.shots_fired.print_board
+      shot_sequence
+    elsif opponent.all_ships_sunk?
+      Messages.admits_victory
+    elsif player.all_ships_sunk?
+      Messages.admits_defeat
+    else
+      # message?
+    end
   end
 end
 
