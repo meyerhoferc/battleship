@@ -209,4 +209,30 @@ class LedgerTest < Minitest::Test
     """
     assert_equal board, ledger.print_board
   end
+
+  def test_can_find_and_mark_ship_as_hit
+    coords_1 = "A1 A2"
+    coords_2 = "B1 B3"
+    coord_1 = "A1"
+    coord_2 = "A2"
+    coord_3 = "B1"
+    coord_4 = "B3"
+
+    ledger.insert(ship_1, coords_1)
+    ledger.insert(ship_2, coords_2)
+
+    assert_equal ship_1, ledger.find_and_hit_ship(coord_1)
+    assert_equal 1,  ship_1.times_hit
+    refute ship_1.sunk?
+    assert_equal ship_1, ledger.find_and_hit_ship(coord_2)
+    assert_equal 2,  ship_1.times_hit
+    assert ship_1.sunk?
+
+    assert_equal ship_2, ledger.find_and_hit_ship(coord_3)
+    assert_equal 1,  ship_2.times_hit
+    refute ship_2.sunk?
+    assert_equal ship_2, ledger.find_and_hit_ship(coord_4)
+    assert_equal 2,  ship_2.times_hit
+    refute ship_2.sunk?
+  end
 end

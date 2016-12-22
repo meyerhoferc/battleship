@@ -140,7 +140,15 @@ class Opponent
     @shots += 1
   end
 
+  def fire
+    coords = choose_firing_coordinates
+  end
+
   def choose_firing_coordinates
     @possible_firing_locations.shuffle.shift
+  end
+
+  def all_ships_sunk?
+    @ship_1.sunk? && @ship_2.sunk? ? true : false
   end
 end

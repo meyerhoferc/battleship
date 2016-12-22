@@ -46,6 +46,14 @@ module Messages
     \nEnter the squares for the two-unit ship:\n"
   end
 
+  def self.computer_hit_ship
+    "\nI hit your ship! I will eventually sink all your ships!"
+  end
+
+  def self.computer_miss_ship
+    "\nI missed the ship!"
+  end
+
   def self.hit_ship
     "\nYou hit the ship!\nHere's a updated view:\n"
   end
@@ -60,5 +68,17 @@ module Messages
 
   def self.second_ship
     "\nEnter coordinates for your second ship. Make sure these are for a ship of 3 units in length."
+  end
+
+  def self.computer_sunk_ship
+    "\nI have sunk your ship! The Light shall prevail!"
+  end
+
+  def self.sunk_ship
+    "\nYou sank my ship, but it's not a big deal. The Light shall burn you!"
+  end
+
+  def self.prompt_for_coords
+    "\nEnter the coordinates you would like to fire at."
   end
 end

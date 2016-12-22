@@ -62,20 +62,41 @@ class BattleShip
 
   def shot_sequence
     if opponent.all_ships_sunk? == false && player.all_ships_sunk? == false
-      opponent.fire(player.ship_board)
-      # hit or miss message maybe in this method?
-      coords = gets.upcase.chomp
-      player.fire(opponent.ship_board, coords) #hot sure which class this goes in
-      # hit or miss message
-      # display shots fired board
-      # player.shots_fired.print_board
+      opponent_coords = opponent.fire
+      if player.ship_board.contains_ship?(opponent_coords)
+        puts Messages.computer_hit_ship
+        ship = player.ship_board.find_and_hit_ship(opponent_coords)
+        if ship.sunk?
+          puts Messages.computer_sunk_ship
+        end
+      else
+        puts Messages.computer_miss_ship
+      end
+      player.shots_fired.print_board
+      puts Messages.prompt_for_coords
+      player_coords = gets.upcase.chomp
+      player.fire(opponent.ship_board, player_coords)
+      if opponent.ship_board.contains_ship?(player_coords)
+        player.shots_fired.mark_as_hit(player_coords)
+        puts Messages.hit_ship
+        ship = opponent.ship_board.find_and_hit_ship(player_coords)
+        if ship.sunk?
+          puts Messages.sunk_ship
+        end
+        player.shots_fired.print_board
+      else
+        player.shots_fired.mark_as_missed(player_coords)
+        puts Messages.miss_ship
+        player.shots_fired.print_board
+      end
       shot_sequence
     elsif opponent.all_ships_sunk?
-      Messages.admits_victory
+      puts Messages.admits_victory
+      # end_game_sequence
     elsif player.all_ships_sunk?
-      Messages.admits_defeat
+      puts Messages.admits_defeat
+      # end_game_sequence
     else
-      # message?
     end
   end
 end

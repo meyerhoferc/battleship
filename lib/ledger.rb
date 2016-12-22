@@ -137,4 +137,12 @@ class Ledger
     row, column = formatted_coord
     @board[row][column.to_i - 1] = "H"
   end
+
+  def find_and_hit_ship(coord)
+    formatted_coord = format_letters(coord)
+    row, column = formatted_coord
+    ship = @board[row][column.to_i - 1]
+    ship.hit
+    ship
+  end
 end
