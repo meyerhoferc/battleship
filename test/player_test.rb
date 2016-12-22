@@ -88,8 +88,26 @@ class PlayerTest < Minitest::Test
   end
 
 
+  def test_knows_if_all_ships_sunk
+    coord_1 = "A1 A2"
+    coord_2 = "D1 B1"
+    ship_1 = player.fleet[0]
+    ship_2 = player.fleet[1]
+    player.place_ship(ship_1, coord_1)
+    player.place_ship(ship_2, coord_2)
+
+    refute player.all_ships_sunk?
+    ship_1.hit
+    ship_1.hit
+    ship_2.hit
+    ship_2.hit
+    ship_2.hit
+    assert player.all_ships_sunk?
+  end
+
+
   def test_can_make_a_shot_at_opponent
-    skip 
+    skip
     coords = "C2"
     assert player.fire(coords)
   end

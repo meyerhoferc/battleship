@@ -28,4 +28,8 @@ class Player
     # talks to opponent board
     # will show out shots fired
   end
+
+  def all_ships_sunk?
+    @ship_1.sunk? && @ship_2.sunk? ? true : false 
+  end
 end

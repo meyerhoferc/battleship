@@ -34,6 +34,10 @@ class OpponentTest < Minitest::Test
     assert_equal 3, opponent.fleet[1].size
   end
 
+  def test_case_name
+
+  end
+
   def test_keeps_track_of_shots_made_at_enemy
     assert_equal 0, opponent.shots
     opponent.fire

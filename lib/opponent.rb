@@ -73,9 +73,6 @@ class Opponent
       @coord_2 = @possible_firing_locations[coord_2_index]
     else
     end
-    # @possible_firing_locations.delete(@coord_1)
-    # @possible_firing_locations.delete(@coord_2)
-    # binding.pry
   end
 
   def check_size_three_coordinate(coord_1, orientation)
@@ -139,7 +136,7 @@ class Opponent
 
   def fire
     coords = choose_firing_coordinates
-    mark_as_hit_or_miss
+    # mark_as_hit_or_miss
     @shots += 1
   end
 

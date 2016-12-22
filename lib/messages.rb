@@ -45,4 +45,20 @@ module Messages
     \nThe grid has A1 at the top left and D4 at the bottom right.
     \nEnter the squares for the two-unit ship:\n"
   end
+
+  def self.hit_ship
+    "\nYou hit the ship!\nHere's a updated view:\n"
+  end
+
+  def self.miss_ship
+    "\nYou missed the ship!\nHere's a updated view:\n"
+  end
+
+  def self.invalid_entry
+    "\nUnfortunately, that input was invalid. Please try again:\n"
+  end
+
+  def self.second_ship
+    "\nEnter coordinates for your second ship. Make sure these are for a ship of 3 units in length."
+  end
 end

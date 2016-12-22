@@ -81,4 +81,7 @@ class Ledger
     end
     @board[middle_row][middle_column] = ship
   end
+  #
+  # def all_ships_sunk?
+  # end 
 end

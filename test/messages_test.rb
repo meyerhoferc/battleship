@@ -59,4 +59,24 @@ class MessagesTest < Minitest::Test
 
     assert_equal message, Messages.finished_entering_ships
   end
+
+  def test_gives_message_when_hit_ship
+    message = "\nYou hit the ship!\nHere's a updated view:\n"
+    assert_equal message, Messages.hit_ship
+  end
+
+  def test_gives_message_when_you_miss_ship
+    message = "\nYou missed the ship!\nHere's a updated view:\n"
+    assert_equal message, Messages.miss_ship
+  end
+
+  def test_has_invalid_entry_message
+    message = "\nUnfortunately, that input was invalid. Please try again:\n"
+    assert_equal message, Messages.invalid_entry
+  end
+
+  def test_enter_second_ship_messages
+    message = "\nEnter coordinates for your second ship. Make sure these are for a ship of 3 units in length."
+    assert_equal message, Messages.second_ship
+  end
 end

@@ -127,7 +127,6 @@ class LedgerTest < Minitest::Test
     assert ship_1.placed?
     assert ship_2.placed?
     assert ship_3.placed?
-    refute ships.hit?
     # FINISH HERE
   end
 
