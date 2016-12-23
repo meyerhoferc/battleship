@@ -83,6 +83,7 @@ class PlayerTest < Minitest::Test
     coords_4 = "A4"
     coords_5 = "B1"
 
+    assert_equal 0, player.shots
     player.fire(opponent.ship_board, coords_1)
     assert_equal 1, player.shots
     player.fire(opponent.ship_board, coords_2)

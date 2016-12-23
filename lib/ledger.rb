@@ -4,7 +4,9 @@ require './lib/coordinate_rules.rb'
 require 'pry'
 
 class Ledger
+
   include CoordinateRules
+
   attr_reader :difficulty,
               :board
 
@@ -33,30 +35,6 @@ class Ledger
     make_row_printable(row_2, row_2_new)
     make_row_printable(row_3, row_3_new)
     make_row_printable(row_4, row_4_new)
-    # row_1.each do |i|
-    #   if i == 0
-    #     i = " "
-    #   end
-    #   row_1_new << i
-    # end
-    # row_2.each do |i|
-    #   if i == 0
-    #     i = " "
-    #   end
-    #   row_2_new << i
-    # end
-    # row_3.each do |i|
-    #   if i == 0
-    #     i = " "
-    #   end
-    #   row_3_new << i
-    # end
-    # row_4.each do |i|
-    #   if i == 0
-    #     i = " "
-    #   end
-    #   row_4_new << i
-    # end
     border = '============'
     printed_board = """
     #{border}
