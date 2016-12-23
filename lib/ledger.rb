@@ -78,25 +78,68 @@ class Ledger
   end
 
   def insert(ship, coords)
-    valid_and_available_coords?(ship, coords)
-    row_1, column_1, space, row_2, column_2 = format_letters(coords)
-    @board[row_1][column_1.to_i - 1] = ship
-    @board[row_2][column_2.to_i - 1] = ship
-    if ship.size == 3
-      mark_middle_spot(ship, coords)
+    if valid_and_available_coords?(ship, coords)
+      row_1, column_1, space, row_2, column_2 = format_letters(coords)
+      @board[row_1][column_1.to_i - 1] = ship
+      @board[row_2][column_2.to_i - 1] = ship
+      if ship.size == 3
+        mark_middle_spot(ship, coords)
+      end
+      ship.place_on_board
+    else
+      false
     end
-    ship.place_on_board
+  end
+
+  def coords_nil?(coords)
+    CoordinateRules.coords_nil?(self, coords)
+  end
+
+  def all_rules_pass?(ship, coords)
+    if CoordinateRules.coords_exist?(self, coords) &&
+      CoordinateRules.ship_length_equals_coord_length(self, ship, coords) &&
+      CoordinateRules.coords_empty?(self, coords) &&
+      CoordinateRules.coordinates_adjacent?(self, coords)
+      true
+    else
+      false
+    end
   end
 
   def valid_and_available_coords?(ship, coords)
-    CoordinateRules.coords_exist?(self, coords)
-    CoordinateRules.ship_length_equals_coord_length(self, ship, coords)
-    CoordinateRules.coords_empty?(self, coords)
-    CoordinateRules.coordinates_adjacent?(self, coords)
-    if ship.size == 3
-      CoordinateRules.all_three_empty?(self, coords)
+    unless coords_nil?(coords)
+      all_rules_pass?(ship, coords)
+      if ship.size == 3
+        CoordinateRules.all_three_empty?(self, coords)
+      end
+      true
     end
   end
+
+  # def valid_and_available_coords?(ship, coords)
+  #   if coords_nil?(coords) == true
+  #     false
+  #   else
+  #     all_rules_pass?(ship, coords)
+  #     if ship.size == 3
+  #       CoordinateRules.all_three_empty?(self, coords)
+  #     end
+  #   end
+  # end
+
+  # def valid_and_available_coords?(ship, coords)
+  #   if coords_nil?(coords) == true
+  #     false
+  #   else
+  #     CoordinateRules.coords_exist?(self, coords)
+  #     CoordinateRules.ship_length_equals_coord_length(self, ship, coords)
+  #     CoordinateRules.coords_empty?(self, coords)
+  #     CoordinateRules.coordinates_adjacent?(self, coords)
+  #     if ship.size == 3
+  #       CoordinateRules.all_three_empty?(self, coords)
+  #     end
+  #   end
+  # end
 
   def mark_middle_spot(ship, coords)
     row_1, column_1, space, row_2, column_2 = format_letters(coords)

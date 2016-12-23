@@ -74,8 +74,8 @@ class LedgerTest < Minitest::Test
   end
 
   def test_cannot_insert_a_ship_with_invalid_coords
-    skip
-    coord_1 = "A1 A4"
+    skip 
+    coord_1 = "A1 F4"
     coord_2 = "B1 D3"
     coord_3 = "D1 F1"
 
@@ -98,22 +98,8 @@ class LedgerTest < Minitest::Test
     refute ledger.has_ship?(ship_3)
   end
 
-  def test_can_print_empty_board
-    skip
-    board = """
-    ============
-    . 1 2 3 4
-    A
-    B
-    C
-    D
-    ============
-    """
-    assert_equal board, ledger.print_board
-  end
-
-
   def test_it_knows_if_ship_at_coordinate
+    skip
     coord_1 = "A1 A2"
     coord_2 = "B1 B3"
     coord_3 = "D1 B1"
@@ -181,6 +167,7 @@ class LedgerTest < Minitest::Test
   end
 
   def test_can_find_and_mark_ship_as_hit
+    skip
     coords_1 = "A1 A2"
     coords_2 = "B1 B3"
     coord_1 = "A1"

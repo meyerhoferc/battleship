@@ -52,7 +52,6 @@ module CoordinateRules
       row_2_c = row_2.codepoints.first
       row_1_c > row_2_c ? middle_row = [row_2_c + 1].pack("U*") : middle_row = [row_1_c + 1].pack("U*")
     else
-      # error message
     end
     ledger.board[row_1][column_1.to_i - 1] == 0 ? true : false
     ledger.board[row_2][column_2.to_i - 1] == 0 ? true : false
