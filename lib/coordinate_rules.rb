@@ -22,8 +22,9 @@ module CoordinateRules
     difference = @available_coords.index(coord_1) - @available_coords.index(coord_2)
     if ship.size == 2
       difference.abs == 1 || difference.abs == 4 ? true : false
-    else
+    elsif ship.size == 3
       difference.abs == 2 || difference.abs == 8 ? true : false
+    else 
     end
   end
 

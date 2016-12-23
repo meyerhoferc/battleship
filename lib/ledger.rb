@@ -95,15 +95,23 @@ class Ledger
     CoordinateRules.coords_nil?(self, coords)
   end
 
+  # def all_rules_pass?(ship, coords)
+  #   if CoordinateRules.coords_exist?(self, coords) &&
+  #     CoordinateRules.ship_length_equals_coord_length(self, ship, coords) &&
+  #     CoordinateRules.coords_empty?(self, coords) &&
+  #     CoordinateRules.coordinates_adjacent?(self, coords)
+  #     true
+  #   else
+  #     false
+  #   end
+  # end
+
   def all_rules_pass?(ship, coords)
-    if CoordinateRules.coords_exist?(self, coords) &&
-      CoordinateRules.ship_length_equals_coord_length(self, ship, coords) &&
-      CoordinateRules.coords_empty?(self, coords) &&
-      CoordinateRules.coordinates_adjacent?(self, coords)
-      true
-    else
-      false
-    end
+    exist = CoordinateRules.coords_exist?(self, coords) ? true : false
+    empty = CoordinateRules.coords_empty?(self, coords) ? true : false
+    size = CoordinateRules.ship_length_equals_coord_length(self, ship, coords) ? true : false
+    adjacent = CoordinateRules.coordinates_adjacent?(self, coords) ? true : false
+    exist && size && empty && adjacent
   end
 
   def valid_and_available_coords?(ship, coords)

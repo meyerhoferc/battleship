@@ -77,16 +77,21 @@ class PlayerTest < Minitest::Test
   end
 
   def test_shots_increases_when_firing
-    coords = "A1"
-    player.fire(opponent.ship_board, coords)
+    coords_1 = "A1"
+    coords_2 = "A2"
+    coords_3 = "A3"
+    coords_4 = "A4"
+    coords_5 = "B1"
+
+    player.fire(opponent.ship_board, coords_1)
     assert_equal 1, player.shots
-    player.fire(opponent.ship_board, coords)
+    player.fire(opponent.ship_board, coords_2)
     assert_equal 2, player.shots
-    player.fire(opponent.ship_board, coords)
+    player.fire(opponent.ship_board, coords_3)
     assert_equal 3, player.shots
-    player.fire(opponent.ship_board, coords)
+    player.fire(opponent.ship_board, coords_4)
     assert_equal 4, player.shots
-    player.fire(opponent.ship_board, coords)
+    player.fire(opponent.ship_board, coords_5)
     assert_equal 5, player.shots
   end
 

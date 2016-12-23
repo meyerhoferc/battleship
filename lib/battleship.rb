@@ -45,6 +45,20 @@ class BattleShip
     puts Messages.beginning_prompt
   end
 
+  def player_ship_placement
+    if player.all_ships_sunk? == false && player.fleet[0].placed? == false
+      puts '===============' * 5
+      puts Messages.finished_entering_ships
+      place_first_ship
+    elsif player.all_ships_sunk? == false && player.fleet[0].placed? == true && player.fleet[1].placed? == false
+      puts '===============' * 5
+      puts Messages.second_ship
+      place_second_ship
+    else
+      shot_sequence
+    end
+  end
+
   def ship_coords_all_valid?(ship, coords)
     if player.ship_board.valid_and_available_coords?(ship, coords)
       true
@@ -74,31 +88,8 @@ class BattleShip
       player.place_ship(ship_2, coords)
       player_ship_placement
     else
-      Messages.invalid_entry
+      puts Messages.invalid_entry
       place_second_ship
-    end
-  end
-
-  def player_ship_placement
-    if player.all_ships_sunk? == false && player.fleet[0].placed? == false
-      puts '===============' * 5
-      puts Messages.finished_entering_ships
-      place_first_ship
-    elsif player.all_ships_sunk? == false && player.fleet[0].placed? == true && player.fleet[1].placed? == false
-      puts '===============' * 5
-      puts Messages.second_ship
-      place_second_ship
-    else
-      shot_sequence
-    end
-  end
-
-  def computer_hits_ship(opponent_coords)
-    puts '===============' * 5
-    puts Messages.computer_hit_ship
-    ship = player.ship_board.find_and_hit_ship(opponent_coords)
-    if ship.sunk?
-      puts Messages.computer_sunk_ship
     end
   end
 
@@ -106,7 +97,7 @@ class BattleShip
     if opponent.all_ships_sunk? == false && player.all_ships_sunk? == false
       opponent_coords = opponent.fire
       if player.ship_board.contains_ship?(opponent_coords)
-        computer_hits_ship
+        computer_hits_ship(opponent_coords)
       else
         puts '===============' * 5
         puts Messages.computer_miss_ship
@@ -125,12 +116,26 @@ class BattleShip
     end
   end
 
+  def computer_hits_ship(opponent_coords)
+    puts '===============' * 5
+    puts Messages.computer_hit_ship
+    ship = player.ship_board.find_and_hit_ship(opponent_coords)
+    if ship.sunk?
+      puts Messages.computer_sunk_ship
+    end
+  end
+
   def player_shot_sequence
     puts player.shots_fired.print_board
     puts Messages.prompt_for_coords
     player_coords = gets.upcase.chomp
-    player.fire(opponent.ship_board, player_coords)
-    check_if_player_hit_or_miss(player_coords)
+    if player.valid_firing_coords?(player_coords)
+      player.fire(opponent.ship_board, player_coords)
+      check_if_player_hit_or_miss(player_coords)
+    else
+      puts Messages.invalid_entry
+      player_shot_sequence
+    end
   end
 
   def check_if_player_hit_or_miss(player_coords)

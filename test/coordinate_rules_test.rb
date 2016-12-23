@@ -30,6 +30,7 @@ class CoordinateRulesTest < Minitest::Test
     coords_2 = "A2 B2"
     coords_3 = "A1 C1"
     coords_4 = "A2 D2"
+    coords_5 = "D1 D2"
 
     assert CoordinateRules.ship_length_equals_coord_length(ledger, ship_1, coords_1)
     assert CoordinateRules.ship_length_equals_coord_length(ledger, ship_1, coords_2)
@@ -40,6 +41,7 @@ class CoordinateRulesTest < Minitest::Test
     refute CoordinateRules.ship_length_equals_coord_length(ledger, ship_2, coords_2)
     assert CoordinateRules.ship_length_equals_coord_length(ledger, ship_2, coords_3)
     refute CoordinateRules.ship_length_equals_coord_length(ledger, ship_2, coords_4)
+    refute CoordinateRules.ship_length_equals_coord_length(ledger, ship_2, coords_5)
   end
 
   def test_it_knows_if_coords_are_empty

@@ -29,9 +29,14 @@ class Player
   end
 
   def fire(board, coords)
-    @shots += 1
+    if valid_firing_coords?(coords)
+      @shots += 1
+    end 
+  end
+
+  def valid_firing_coords?(coords)
     if fired_already?(coords) || FiringRules.coords_exist?(coords) == false
-      false 
+      false
     else
       @fired_coords << coords
     end
