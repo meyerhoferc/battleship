@@ -65,6 +65,12 @@ module CoordinateRules
     ledger.board[middle_row][middle_column] == 0 ? true : false
   end
 
+  def self.all_three_adjacent(ledger, coords)
+    coord_1, coord_2 = ledger.format_pairs(coords)
+    # check horizontal ? 2 indices, no wraps
+    # check vertical ? 8 indices, no wraps
+  end
+
   def self.coords_nil?(ledger, coords)
     formatted_coords = ledger.format_pairs(coords)
     coord_1, coord_2 = formatted_coords

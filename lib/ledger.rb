@@ -108,6 +108,7 @@ class Ledger
       all_rules_pass?(ship, coords)
       if ship.size == 3
         CoordinateRules.all_three_empty?(self, coords)
+        # CoordinateRules.all_three_adjacent?(self, coords)
       end
       true
     end

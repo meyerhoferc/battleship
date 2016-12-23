@@ -112,4 +112,22 @@ class CoordinateRulesTest < Minitest::Test
     assert CoordinateRules.coords_nil?(ledger, coords_3)
     assert CoordinateRules.coords_nil?(ledger, coords_4)
   end
+
+  def test_all_three_adjacent?
+    coords_1 = "A1 A3"
+    coords_2 = "B4 D4"
+    coords_3 = "C1 C3"
+    coords_4 = "A1 C2"
+    coords_5 = "D3 A1"
+    coords_6 = "D4 A2"
+    coords_7 = "D2 D4"
+    # will probably have to check if horizontal or vertical first
+    assert CoordinateRules.all_three_adjacent?(ledger, coords_1)
+    assert CoordinateRules.all_three_adjacent?(ledger, coords_2)
+    assert CoordinateRules.all_three_adjacent?(ledger, coords_3)
+    refute CoordinateRules.all_three_adjacent(ledger, coords_4)
+    refute CoordinateRules.all_three_adjacent(ledger, coords_5)
+    refute CoordinateRules.all_three_adjacent(ledger, coords_6)
+    assert CoordinateRules.all_three_adjacent(ledger, coords_7)
+  end
 end
