@@ -71,11 +71,17 @@ class CoordinateRulesTest < Minitest::Test
     coords_2 = "A2 B2"
     coords_3 = "A1 B2"
     coords_4 = "D4 B2"
+    coords_5 = "A1 A3"
+    coords_6 = "A1 B3"
+    coords_7 = "A1 A4"
 
     assert CoordinateRules.coordinates_adjacent?(ledger, coords_1)
     assert CoordinateRules.coordinates_adjacent?(ledger, coords_2)
     refute CoordinateRules.coordinates_adjacent?(ledger, coords_3)
     refute CoordinateRules.coordinates_adjacent?(ledger, coords_4)
+    refute CoordinateRules.coordinates_adjacent?(ledger, coords_5)
+    refute CoordinateRules.coordinates_adjacent?(ledger, coords_6)
+    refute CoordinateRules.coordinates_adjacent?(ledger, coords_7)
   end
 
   def test_middle_coordinate_available_for_size_3_vertical_ship

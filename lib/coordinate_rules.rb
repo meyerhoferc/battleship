@@ -24,7 +24,7 @@ module CoordinateRules
       difference.abs == 1 || difference.abs == 4 ? true : false
     elsif ship.size == 3
       difference.abs == 2 || difference.abs == 8 ? true : false
-    else 
+    else
     end
   end
 
@@ -36,18 +36,24 @@ module CoordinateRules
   end
 
   def self.coordinates_adjacent?(ledger, coords)
+    coord_1, coord_2 = ledger.format_pairs(coords)
     formatted_coords = ledger.format_letters(coords)
     row_1, column_1, space, row_2, column_2 = formatted_coords
     row_1 == row_2 || column_1 == column_2 ? true : false
+
+    coord_1_index = @available_coords.index(coord_1)
+    coord_2_index = @available_coords.index(coord_2)
+    difference = coord_1_index - coord_2_index
+    difference.abs == 1 || difference.abs == 4 ? true : false
   end
 
   def self.all_three_empty?(ledger, coords)
     formatted_coords = ledger.format_letters(coords)
     row_1, column_1, space, row_2, column_2 = formatted_coords
-    if row_1 == row_2 # horizontal
+    if row_1 == row_2
       middle_row = row_1
       column_1.to_i > column_2.to_i ? middle_column = (column_2.to_i) : middle_column = (column_1.to_i)
-    elsif column_1 == column_2 # vertical
+    elsif column_1 == column_2
       middle_column = column_1.to_i - 1
       row_1_c = row_1.codepoints.first
       row_2_c = row_2.codepoints.first
