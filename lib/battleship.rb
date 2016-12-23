@@ -23,6 +23,7 @@ class BattleShip
   def begin_game
     initial_input = gets.downcase.chomp
     if initial_input == 'p'
+      @initial_time = Time.now
       opponent.place_ships_on_board
       player_ship_placement
     elsif initial_input == 'i'
@@ -180,7 +181,9 @@ class BattleShip
   end
 
   def end_game_sequence(winner)
-    # puts Messages.total_time(@time_elapsed)
+    @final_time = Time.now
+    time_elapsed = (@final_time - @initial_time).round
+    puts Messages.total_time(time_elapsed)
     puts Messages.winner_shots(winner, winner.shots)
   end
 end

@@ -83,7 +83,7 @@ module Messages
   end
 
   def self.total_time(time)
-    "\nThe total time of the game was #{time} minutes long."
+    "\nThe total time of the game was #{time} seconds long."
   end
 
   def self.winner_shots(person, shots)

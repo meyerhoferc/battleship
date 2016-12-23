@@ -106,7 +106,7 @@ class MessagesTest < Minitest::Test
   end
 
   def test_reports_on_duration_of_game
-    message = "\nThe total time of the game was 5 minutes long."
+    message = "\nThe total time of the game was 5 seconds long."
     assert_equal message, Messages.total_time(5)
   end
 
