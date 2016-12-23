@@ -81,4 +81,13 @@ module Messages
   def self.prompt_for_coords
     "\nEnter the coordinates you would like to fire at."
   end
+
+  def self.total_time(time)
+    "\nThe total time of the game was #{time} minutes long."
+  end
+
+  def self.winner_shots(person, shots)
+    person == "player" ? person = "You" : person = "I"
+    "\n#{person} took #{shots} shots in order to win."
+  end
 end

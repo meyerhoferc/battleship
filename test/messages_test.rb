@@ -104,4 +104,14 @@ class MessagesTest < Minitest::Test
     message = "\n[Gretchen]: I hit your ship! I will eventually sink all your ships!"
     assert_equal message, Messages.computer_hit_ship
   end
+
+  def test_reports_on_duration_of_game
+    message = "\nThe total time of the game was 5 minutes long."
+    assert_equal message, Messages.total_time(5)
+  end
+
+  def test_reports_how_many_shots_winner_took
+    message = "\nYou took 10 shots in order to win."
+    assert_equal message, Messages.winner_shots("player", 10)
+  end
 end

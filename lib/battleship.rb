@@ -123,16 +123,19 @@ class BattleShip
       declare_winner
     end
   end
-  
+
   def declare_winner
     if opponent.all_ships_sunk?
       puts '===============' * 5
       puts Messages.admits_victory
-      # end_game_sequence
-    else player.all_ships_sunk?
+      end_game_sequence(opponent)
+    elsif player.all_ships_sunk?
       puts '===============' * 5
       puts Messages.admits_defeat
-      # end_game_sequence
+      end_game_sequence(player)
+    else
+      puts "\nIt was a tie!"
+      end_game_sequence(tie)
     end
   end
 
@@ -174,6 +177,11 @@ class BattleShip
       puts Messages.miss_ship
       puts player.shots_fired.print_board
     end
+  end
+
+  def end_game_sequence(winner)
+    # puts Messages.total_time(@time_elapsed)
+    puts Messages.winner_shots(winner, winner.shots)
   end
 end
 

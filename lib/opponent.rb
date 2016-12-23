@@ -18,13 +18,11 @@ class Opponent
     @ship_1 = Ship.new(2)
     @ship_2 = Ship.new(3)
     @fleet = [@ship_1, @ship_2]
-    # @fleet = [@ship_1]
-    @shots = 0
     @possible_firing_locations = []
     @current_ship_placements = []
+    @currently_used_coordinates = []
     @shots = 0
     update_possible_firing_locations
-    # place_ships_on_board
   end
 
   def update_possible_firing_locations
@@ -49,6 +47,7 @@ class Opponent
     if ship.size == 2
       get_adjacent_coordinate(@coord_1, orientation)
     else
+      check_for_duplicates(@coord_1) ? pick_coordinate_set(ship) : true
       check_size_three_coordinate(@coord_1, orientation)
     end
   end
@@ -75,6 +74,10 @@ class Opponent
     end
   end
 
+  def check_for_duplicates(coord)
+    @currently_used_coordinates.include?(coord) ? true : false
+  end
+
   def check_size_three_coordinate(coord_1, orientation)
     row_1, column_1 = coord_1.chars
     ship_1_row_1, ship_1_column_1, space, ship_1_row_2, ship_1_column_2 = @current_ship_placements[0].chars
@@ -98,14 +101,18 @@ class Opponent
     row_1, column_1 = coord_1.chars
     if row_1 == "A"
       coord_1_index = @possible_firing_locations.index(coord_1)
-      @coord_2 = @possible_firing_locations[coord_1_index + 8]
+      coord_2 = @possible_firing_locations[coord_1_index + 8]
+      check_for_duplicates(coord_2) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2
     elsif row_1 == "D"
       coord_1_index = @possible_firing_locations.index(coord_1)
-      @coord_2 = @possible_firing_locations[coord_1_index - 8]
+      coord_2 = @possible_firing_locations[coord_1_index - 8]
+      check_for_duplicates(coord_2) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2
     else
       coord_1_index = @possible_firing_locations.index(coord_1)
-      @coord_1 = @possible_firing_locations[coord_1_index - 4]
-      @coord_2 = @possible_firing_locations[coord_1_index + 4]
+      coord_1_new = @possible_firing_locations[coord_1_index - 4]
+      check_for_duplicates(coord_1_new) ? pick_coordinate_set(@ship_2) : @coord_1 = coord_1_new
+      coord_2_new = @possible_firing_locations[coord_1_index + 4]
+      check_for_duplicates(coord_2_new) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2_new
     end
   end
 
@@ -113,14 +120,18 @@ class Opponent
     row_1, column_1 = coord_1.chars
     if column_1 == "1"
       coord_1_index = @possible_firing_locations.index(coord_1)
-      @coord_2 = @possible_firing_locations[coord_1_index + 2]
+      coord_2 = @possible_firing_locations[coord_1_index + 2]
+      check_for_duplicates(coord_2) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2
     elsif column_1 == "4"
       coord_1_index = @possible_firing_locations.index(coord_1)
-      @coord_2 = @possible_firing_locations[coord_1_index - 2]
+      coord_2 = @possible_firing_locations[coord_1_index - 2]
+      check_for_duplicates(coord_2) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2
     else
       coord_1_index = @possible_firing_locations.index(coord_1)
-      @coord_1 = @possible_firing_locations[coord_1_index - 1]
-      @coord_2 = @possible_firing_locations[coord_1_index + 1]
+      coord_1_new = @possible_firing_locations[coord_1_index - 1]
+      check_for_duplicates(coord_1_new) ? pick_coordinate_set(@ship_2) : @coord_1 = coord_1_new
+      coord_2_new = @possible_firing_locations[coord_1_index + 1]
+      check_for_duplicates(coord_2_new) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2_new
     end
   end
 
@@ -128,6 +139,8 @@ class Opponent
     @fleet.each do |ship|
       pick_coordinate_set(ship)
       coords = @coord_1 + " " + @coord_2
+      @currently_used_coordinates << @coord_1
+      @currently_used_coordinates << @coord_2
       @current_ship_placements << coords
       board.insert(ship, coords)
     end
