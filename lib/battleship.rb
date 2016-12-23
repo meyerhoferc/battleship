@@ -114,11 +114,11 @@ class BattleShip
     if opponent.all_ships_sunk?
       puts '===============' * 5
       puts Messages.admits_defeat
-      end_game_sequence(player)
+      end_game_sequence("player", player)
     elsif player.all_ships_sunk?
       puts '===============' * 5
       puts Messages.admits_victory
-      end_game_sequence(opponent)
+      end_game_sequence("opponent", opponent)
     else
       puts "\nIt was a tie!"
       end_game_sequence(tie)
@@ -165,11 +165,11 @@ class BattleShip
     end
   end
 
-  def end_game_sequence(winner)
+  def end_game_sequence(winner_name, winner)
     @final_time = Time.now
     time_elapsed = (@final_time - @initial_time).round
     puts Messages.total_time(time_elapsed)
-    puts Messages.winner_shots(winner, winner.shots)
+    puts Messages.winner_shots(winner_name, winner.shots)
   end
 end
 

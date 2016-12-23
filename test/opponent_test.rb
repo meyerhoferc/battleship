@@ -66,4 +66,19 @@ class OpponentTest < Minitest::Test
     assert ship_1.placed?
     assert ship_2.placed?
   end
+
+  def test_knows_if_all_ships_sunk
+    ship_1 = opponent.fleet[0]
+    ship_2 = opponent.fleet[1]
+    refute opponent.all_ships_sunk?
+    ship_1.hit
+    ship_1.hit
+    assert ship_1.sunk?
+    ship_2.hit
+    ship_2.hit
+    refute ship_2.sunk?
+    refute opponent.all_ships_sunk?
+    ship_2.hit
+    assert opponent.all_ships_sunk?
+  end
 end

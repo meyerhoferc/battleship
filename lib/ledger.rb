@@ -29,30 +29,34 @@ class Ledger
     row_2_new = []
     row_3_new = []
     row_4_new = []
-    row_1.each do |i|
-      if i == 0
-        i = " "
-      end
-      row_1_new << i
-    end
-    row_2.each do |i|
-      if i == 0
-        i = " "
-      end
-      row_2_new << i
-    end
-    row_3.each do |i|
-      if i == 0
-        i = " "
-      end
-      row_3_new << i
-    end
-    row_4.each do |i|
-      if i == 0
-        i = " "
-      end
-      row_4_new << i
-    end
+    make_row_printable(row_1, row_1_new)
+    make_row_printable(row_2, row_2_new)
+    make_row_printable(row_3, row_3_new)
+    make_row_printable(row_4, row_4_new)
+    # row_1.each do |i|
+    #   if i == 0
+    #     i = " "
+    #   end
+    #   row_1_new << i
+    # end
+    # row_2.each do |i|
+    #   if i == 0
+    #     i = " "
+    #   end
+    #   row_2_new << i
+    # end
+    # row_3.each do |i|
+    #   if i == 0
+    #     i = " "
+    #   end
+    #   row_3_new << i
+    # end
+    # row_4.each do |i|
+    #   if i == 0
+    #     i = " "
+    #   end
+    #   row_4_new << i
+    # end
     border = '============'
     printed_board = """
     #{border}
@@ -63,6 +67,15 @@ class Ledger
     #{keys[4]} #{row_4_new[0]} #{row_4_new[1]} #{row_4_new[2]} #{row_4_new[3]} #{row_4_new[4]}
     #{border}
     """
+  end
+
+  def make_row_printable(row, new_row)
+    row.each do |i|
+      if i == 0
+        i = " "
+      end
+      new_row << i
+    end
   end
 
   def has_ship?(ship)
@@ -107,8 +120,8 @@ class Ledger
     unless coords_nil?(coords)
       all_rules_pass?(ship, coords)
       if ship.size == 3
-        empty = CoordinateRules.all_three_empty?(self, coords)
-        adjacent = CoordinateRules.all_three_adjacent?(self, coords)
+        empty = CoordinateRules.all_three_empty?(self, coords) ? true : false
+        adjacent = CoordinateRules.all_three_adjacent?(self, coords) ? true : false
         empty && adjacent
       end
       true
