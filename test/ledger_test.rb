@@ -180,36 +180,6 @@ class LedgerTest < Minitest::Test
     assert ledger.coordinate_struck?(coord_8)
   end
 
-  def test_can_print_board_with_hits_and_misses
-    skip
-    coord_1 = "A1"
-    coord_2 = "D4"
-    coord_3 = "B3"
-    coord_4 = "C2"
-    coord_5 = "C3"
-    coord_6 = "C4"
-    coord_7 = "A2"
-    coord_8 = "B2"
-    ledger.mark_as_missed(coord_1)
-    ledger.mark_as_missed(coord_2)
-    ledger.mark_as_missed(coord_3)
-    ledger.mark_as_missed(coord_4)
-    ledger.mark_as_hit(coord_5)
-    ledger.mark_as_hit(coord_6)
-    ledger.mark_as_hit(coord_7)
-    ledger.mark_as_hit(coord_8)
-    board = """
-    ============
-    . 1 2 3 4
-    A M H
-    B   H M
-    C   M H H
-    D       M
-    ============
-    """
-    assert_equal board, ledger.print_board
-  end
-
   def test_can_find_and_mark_ship_as_hit
     coords_1 = "A1 A2"
     coords_2 = "B1 B3"

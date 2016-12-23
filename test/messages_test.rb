@@ -79,4 +79,29 @@ class MessagesTest < Minitest::Test
     message = "\nEnter coordinates for your second ship. Make sure these are for a ship of 3 units in length."
     assert_equal message, Messages.second_ship
   end
+
+  def test_gives_message_when_computer_sinks_ship
+    message = "\nI have sunk your ship! The Light shall prevail!"
+    assert_equal message, Messages.computer_sunk_ship
+  end
+
+  def test_gives_message_when_player_sinks_ship
+    message = "\nYou sank my ship, but it's not a big deal. The Light shall burn you!"
+    assert_equal message, Messages.sunk_ship
+  end
+
+  def test_gives_message_for_prompting_coordinates_from_player
+    message =  "\nEnter the coordinates you would like to fire at."
+    assert_equal message, Messages.prompt_for_coords
+  end
+
+  def test_gives_message_when_computer_misses_ship
+    message = "\nI missed the ship!"
+    assert_equal message, Messages.computer_miss_ship
+  end
+
+  def test_gives_message_when_computer_hit_ship
+    message = "\nI hit your ship! I will eventually sink all your ships!"
+    assert_equal message, Messages.computer_hit_ship
+  end
 end

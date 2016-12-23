@@ -72,7 +72,7 @@ class BattleShip
       else
         puts Messages.computer_miss_ship
       end
-      player.shots_fired.print_board
+      puts player.shots_fired.print_board
       puts Messages.prompt_for_coords
       player_coords = gets.upcase.chomp
       player.fire(opponent.ship_board, player_coords)
@@ -83,11 +83,11 @@ class BattleShip
         if ship.sunk?
           puts Messages.sunk_ship
         end
-        player.shots_fired.print_board
+        puts player.shots_fired.print_board
       else
         player.shots_fired.mark_as_missed(player_coords)
         puts Messages.miss_ship
-        player.shots_fired.print_board
+        puts player.shots_fired.print_board
       end
       shot_sequence
     elsif opponent.all_ships_sunk?
