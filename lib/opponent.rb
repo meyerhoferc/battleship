@@ -129,18 +129,12 @@ class Opponent
       pick_coordinate_set(ship)
       coords = @coord_1 + " " + @coord_2
       @current_ship_placements << coords
-      # binding.pry
       board.insert(ship, coords)
     end
   end
 
   def fire
-    coords = choose_firing_coordinates
-    # mark_as_hit_or_miss
     @shots += 1
-  end
-
-  def fire
     coords = choose_firing_coordinates
   end
 

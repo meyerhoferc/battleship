@@ -48,4 +48,22 @@ class OpponentTest < Minitest::Test
     coords = "C2"
     assert opponent.fire
   end
+
+  def test_inserts_ships_on_board
+    ship_1 = opponent.fleet[0]
+    ship_2 = opponent.fleet[1]
+
+    assert_equal 2, ship_1.size
+    assert_equal 3, ship_2.size
+
+    refute ship_1.placed?
+    refute ship_2.placed?
+
+    opponent.place_ships_on_board
+    assert opponent.ship_board.has_ship?(ship_1)
+    assert opponent.ship_board.has_ship?(ship_2)
+
+    assert ship_1.placed?
+    assert ship_2.placed?
+  end
 end

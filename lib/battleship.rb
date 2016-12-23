@@ -92,6 +92,21 @@ class BattleShip
       place_second_ship
     end
   end
+  #
+  # def shot_sequence
+  #   if opponent.all_ships_sunk? == false || player.all_ships_sunk? == false
+  #     opponent_coords = opponent.fire
+  #     if player.ship_board.contains_ship?(opponent_coords)
+  #       computer_hits_ship(opponent_coords)
+  #     else
+  #       puts '===============' * 5
+  #       puts Messages.computer_miss_ship
+  #     end
+  #     player_shot_sequence
+  #     shot_sequence
+  #   else
+  #   end
+  # end
 
   def shot_sequence
     if opponent.all_ships_sunk? == false && player.all_ships_sunk? == false
@@ -104,15 +119,20 @@ class BattleShip
       end
       player_shot_sequence
       shot_sequence
-    elsif opponent.all_ships_sunk?
+    else
+      declare_winner
+    end
+  end
+  
+  def declare_winner
+    if opponent.all_ships_sunk?
       puts '===============' * 5
       puts Messages.admits_victory
       # end_game_sequence
-    elsif player.all_ships_sunk?
+    else player.all_ships_sunk?
       puts '===============' * 5
       puts Messages.admits_defeat
       # end_game_sequence
-    else
     end
   end
 
