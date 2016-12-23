@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-23T14:40:10-07:00">2016-12-23T14:40:10-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-23T16:01:40-07:00">2016-12-23T16:01:40-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">52.58%</span></span>
+    (<span class="covered_percent"><span class="red">55.22%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.07
+         2.28
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>213</b> relevant lines. 
-    <span class="green"><b>112</b> lines covered</span> and
-    <span class="red"><b>101</b> lines missed </span>
+    <b>230</b> relevant lines. 
+    <span class="green"><b>127</b> lines covered</span> and
+    <span class="red"><b>103</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -53,21 +53,21 @@
       <tr>
         <td class="strong"><a href="#d040634ee45724f8b9458f575c8061dc528fa3a9" class="src_link" title="lib/coordinate_rules.rb">lib/coordinate_rules.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>76</td>
-        <td>50</td>
-        <td>50</td>
+        <td>97</td>
+        <td>65</td>
+        <td>65</td>
         <td>0</td>
-        <td>3.9</td>
+        <td>3.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#0ed0f7e7301faa875bd661e9811b012d64aea8a8" class="src_link" title="lib/ledger.rb">lib/ledger.rb</a></td>
-        <td class="red strong">28.85 %</td>
-        <td>162</td>
-        <td>104</td>
+        <td class="red strong">28.3 %</td>
+        <td>164</td>
+        <td>106</td>
         <td>30</td>
-        <td>74</td>
-        <td>1.4</td>
+        <td>76</td>
+        <td>1.6</td>
       </tr>
       
       <tr>
@@ -87,7 +87,7 @@
         <td>19</td>
         <td>12</td>
         <td>7</td>
-        <td>4.2</td>
+        <td>4.6</td>
       </tr>
       
     </tbody>
@@ -111,8 +111,8 @@
     <h3>lib/coordinate_rules.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>50</b> relevant lines. 
-      <span class="green"><b>50</b> lines covered</span> and
+      <b>65</b> relevant lines. 
+      <span class="green"><b>65</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -405,172 +405,298 @@
         <li class="never" data-hits="" data-linenumber="48">
           
           
-          <code class="ruby">    # above is a good check but needs to be more robust, maybe check no spaces?</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="50">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="51">
+        <li class="covered" data-hits="1" data-linenumber="50">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.all_three_empty?(ledger, coords)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="52">
+        <li class="covered" data-hits="4" data-linenumber="51">
           <span class="hits">4</span>
           
           <code class="ruby">    formatted_coords = ledger.format_letters(coords)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="53">
+        <li class="covered" data-hits="4" data-linenumber="52">
           <span class="hits">4</span>
           
           <code class="ruby">    row_1, column_1, space, row_2, column_2 = formatted_coords</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="54">
+        <li class="covered" data-hits="4" data-linenumber="53">
           <span class="hits">4</span>
           
-          <code class="ruby">    if row_1 == row_2 # horizontal</code>
+          <code class="ruby">    if row_1 == row_2</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="55">
+        <li class="covered" data-hits="2" data-linenumber="54">
           <span class="hits">2</span>
           
           <code class="ruby">      middle_row = row_1</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="56">
+        <li class="covered" data-hits="2" data-linenumber="55">
           <span class="hits">2</span>
           
           <code class="ruby">      column_1.to_i &gt; column_2.to_i ? middle_column = (column_2.to_i) : middle_column = (column_1.to_i)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
-          <code class="ruby">    elsif column_1 == column_2 # vertical</code>
+          <code class="ruby">    elsif column_1 == column_2</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="58">
+        <li class="covered" data-hits="2" data-linenumber="57">
           <span class="hits">2</span>
           
           <code class="ruby">      middle_column = column_1.to_i - 1</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="59">
+        <li class="covered" data-hits="2" data-linenumber="58">
           <span class="hits">2</span>
           
           <code class="ruby">      row_1_c = row_1.codepoints.first</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="60">
+        <li class="covered" data-hits="2" data-linenumber="59">
           <span class="hits">2</span>
           
           <code class="ruby">      row_2_c = row_2.codepoints.first</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="61">
+        <li class="covered" data-hits="2" data-linenumber="60">
           <span class="hits">2</span>
           
           <code class="ruby">      row_1_c &gt; row_2_c ? middle_row = [row_2_c + 1].pack(&quot;U*&quot;) : middle_row = [row_1_c + 1].pack(&quot;U*&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="61">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="64">
+        <li class="covered" data-hits="4" data-linenumber="63">
           <span class="hits">4</span>
           
           <code class="ruby">    ledger.board[row_1][column_1.to_i - 1] == 0 ? true : false</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="65">
+        <li class="covered" data-hits="4" data-linenumber="64">
           <span class="hits">4</span>
           
           <code class="ruby">    ledger.board[row_2][column_2.to_i - 1] == 0 ? true : false</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="66">
+        <li class="covered" data-hits="4" data-linenumber="65">
           <span class="hits">4</span>
           
           <code class="ruby">    ledger.board[middle_row][middle_column] == 0 ? true : false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="never" data-hits="" data-linenumber="66">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="68">
+        <li class="never" data-hits="" data-linenumber="67">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="69">
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.all_three_adjacent?(ledger, coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="69">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    coord_1, coord_2 = ledger.format_pairs(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="70">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    formatted_coords = ledger.format_letters(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="71">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    row_1, column_1, space, row_2, column_2 = formatted_coords</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="72">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    if row_1 == row_2 #horizontal condition</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="73">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      coord_1_index = @available_coords.index(coord_1)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="74">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      coord_2_index = @available_coords.index(coord_2)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="75">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      difference = coord_1_index - coord_2_index</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="76">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      difference.abs == 2 ? true : false</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="77">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    elsif column_1 == column_2 #vertical condition</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="78">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      coord_1_index = @available_coords.index(coord_1)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="79">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      coord_2_index = @available_coords.index(coord_2)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      difference = coord_1_index - coord_2_index</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="81">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      difference.abs == 8 ? true : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">      # not sure if this meets wrapping condition </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="84">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby">    # check horizontal ? 2 indices, no wraps</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby">    # check vertical ? 8 indices, no wraps</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="90">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.coords_nil?(ledger, coords)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="70">
+        <li class="covered" data-hits="4" data-linenumber="91">
           <span class="hits">4</span>
           
           <code class="ruby">    formatted_coords = ledger.format_pairs(coords)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="71">
+        <li class="covered" data-hits="4" data-linenumber="92">
           <span class="hits">4</span>
           
           <code class="ruby">    coord_1, coord_2 = formatted_coords</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="72">
+        <li class="covered" data-hits="4" data-linenumber="93">
           <span class="hits">4</span>
           
           <code class="ruby">    @available_coords.index(coord_1).nil? ? true : false</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="73">
+        <li class="covered" data-hits="4" data-linenumber="94">
           <span class="hits">4</span>
           
           <code class="ruby">    @available_coords.index(coord_2).nil? ? true : false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="never" data-hits="" data-linenumber="95">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="never" data-hits="" data-linenumber="96">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="97">
           
           
           <code class="ruby">end</code>
@@ -583,11 +709,11 @@
         <div class="source_table" id="0ed0f7e7301faa875bd661e9811b012d64aea8a8">
   <div class="header">
     <h3>lib/ledger.rb</h3>
-    <h4><span class="red">28.85 %</span> covered</h4>
+    <h4><span class="red">28.3 %</span> covered</h4>
     <div>
-      <b>104</b> relevant lines. 
+      <b>106</b> relevant lines. 
       <span class="green"><b>30</b> lines covered</span> and
-      <span class="red"><b>74</b> lines missed.</span>
+      <span class="red"><b>76</b> lines missed.</span>
     </div>
   </div>
   
@@ -660,38 +786,38 @@
           <code class="ruby">  def initialize(difficulty = 1)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="12">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="12">
+          <span class="hits">11</span>
           
           <code class="ruby">    @difficulty = difficulty</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="13">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="13">
+          <span class="hits">11</span>
           
           <code class="ruby">    @board = Hash.new</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="14">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="14">
+          <span class="hits">11</span>
           
           <code class="ruby">    @board[&#39;.&#39;] = [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;]</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="15">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="15">
+          <span class="hits">11</span>
           
           <code class="ruby">    letters = [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;]</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="16">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="16">
+          <span class="hits">11</span>
           
           <code class="ruby">    letters.each do |letter|</code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="17">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="44" data-linenumber="17">
+          <span class="hits">44</span>
           
           <code class="ruby">      @board[letter] = Array.new(4, 0)</code>
         </li>
@@ -1026,8 +1152,8 @@
           <code class="ruby">  def format_pairs(coords)</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="73">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="29" data-linenumber="73">
+          <span class="hits">29</span>
           
           <code class="ruby">    coords.split</code>
         </li>
@@ -1050,8 +1176,8 @@
           <code class="ruby">  def format_letters(coords)</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="77">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="23" data-linenumber="77">
+          <span class="hits">23</span>
           
           <code class="ruby">    coords.chars</code>
         </li>
@@ -1251,316 +1377,328 @@
         <li class="missed" data-hits="0" data-linenumber="110">
           
           
-          <code class="ruby">        CoordinateRules.all_three_empty?(self, coords)</code>
+          <code class="ruby">        empty = CoordinateRules.all_three_empty?(self, coords)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="111">
+        <li class="missed" data-hits="0" data-linenumber="111">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby">        adjacent = CoordinateRules.all_three_adjacent?(self, coords)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="112">
           
           
-          <code class="ruby">      true</code>
+          <code class="ruby">        empty &amp;&amp; adjacent</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="113">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="114">
+        <li class="missed" data-hits="0" data-linenumber="114">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="115">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="116">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="117">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="116">
+        <li class="covered" data-hits="1" data-linenumber="118">
           <span class="hits">1</span>
           
           <code class="ruby">  def mark_middle_spot(ship, coords)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="117">
+        <li class="missed" data-hits="0" data-linenumber="119">
           
           
           <code class="ruby">    row_1, column_1, space, row_2, column_2 = format_letters(coords)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="118">
+        <li class="missed" data-hits="0" data-linenumber="120">
           
           
           <code class="ruby">    if row_1 == row_2 # horizontal</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="119">
+        <li class="missed" data-hits="0" data-linenumber="121">
           
           
           <code class="ruby">      middle_row = row_1</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="120">
+        <li class="missed" data-hits="0" data-linenumber="122">
           
           
           <code class="ruby">      column_1.to_i &gt; column_2.to_i ? middle_column = (column_2.to_i) : middle_column = (column_1.to_i)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="121">
+        <li class="never" data-hits="" data-linenumber="123">
           
           
           <code class="ruby">    elsif column_1 == column_2 # vertical</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="122">
+        <li class="missed" data-hits="0" data-linenumber="124">
           
           
           <code class="ruby">      middle_column = column_1.to_i - 1</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="123">
+        <li class="missed" data-hits="0" data-linenumber="125">
           
           
           <code class="ruby">      row_1_c = row_1.codepoints.first</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="124">
+        <li class="missed" data-hits="0" data-linenumber="126">
           
           
           <code class="ruby">      row_2_c = row_2.codepoints.first</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="125">
+        <li class="missed" data-hits="0" data-linenumber="127">
           
           
           <code class="ruby">      row_1_c &gt; row_2_c ? middle_row = [row_2_c + 1].pack(&quot;U*&quot;) : middle_row = [row_1_c + 1].pack(&quot;U*&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="126">
+        <li class="never" data-hits="" data-linenumber="128">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="127">
+        <li class="never" data-hits="" data-linenumber="129">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="128">
+        <li class="missed" data-hits="0" data-linenumber="130">
           
           
           <code class="ruby">    @board[middle_row][middle_column] = ship</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="129">
+        <li class="never" data-hits="" data-linenumber="131">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="130">
+        <li class="never" data-hits="" data-linenumber="132">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="131">
+        <li class="covered" data-hits="1" data-linenumber="133">
           <span class="hits">1</span>
           
           <code class="ruby">  def contains_ship?(coord)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="132">
+        <li class="missed" data-hits="0" data-linenumber="134">
           
           
           <code class="ruby">    formatted_coord = format_letters(coord)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="133">
+        <li class="missed" data-hits="0" data-linenumber="135">
           
           
           <code class="ruby">    row, column = formatted_coord</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="134">
+        <li class="missed" data-hits="0" data-linenumber="136">
           
           
           <code class="ruby">    @board[row][column.to_i - 1] == 0 ? false : true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="135">
+        <li class="never" data-hits="" data-linenumber="137">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="136">
+        <li class="never" data-hits="" data-linenumber="138">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="137">
+        <li class="covered" data-hits="1" data-linenumber="139">
           <span class="hits">1</span>
           
           <code class="ruby">  def coordinate_struck?(coord)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="138">
+        <li class="missed" data-hits="0" data-linenumber="140">
           
           
           <code class="ruby">    formatted_coord = format_letters(coord)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="139">
+        <li class="missed" data-hits="0" data-linenumber="141">
           
           
           <code class="ruby">    row, column = formatted_coord</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="140">
+        <li class="missed" data-hits="0" data-linenumber="142">
           
           
           <code class="ruby">    @board[row][column.to_i - 1] == 0 ? false : true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="141">
+        <li class="never" data-hits="" data-linenumber="143">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="142">
+        <li class="never" data-hits="" data-linenumber="144">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="143">
+        <li class="covered" data-hits="1" data-linenumber="145">
           <span class="hits">1</span>
           
           <code class="ruby">  def mark_as_missed(coord)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="144">
+        <li class="missed" data-hits="0" data-linenumber="146">
           
           
           <code class="ruby">    formatted_coord = format_letters(coord)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="145">
+        <li class="missed" data-hits="0" data-linenumber="147">
           
           
           <code class="ruby">    row, column = formatted_coord</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="146">
+        <li class="missed" data-hits="0" data-linenumber="148">
           
           
           <code class="ruby">    @board[row][column.to_i - 1] = &quot;M&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="147">
+        <li class="never" data-hits="" data-linenumber="149">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="148">
+        <li class="never" data-hits="" data-linenumber="150">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="149">
+        <li class="covered" data-hits="1" data-linenumber="151">
           <span class="hits">1</span>
           
           <code class="ruby">  def mark_as_hit(coord)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="150">
+        <li class="missed" data-hits="0" data-linenumber="152">
           
           
           <code class="ruby">    formatted_coord = format_letters(coord)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="151">
+        <li class="missed" data-hits="0" data-linenumber="153">
           
           
           <code class="ruby">    row, column = formatted_coord</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="152">
+        <li class="missed" data-hits="0" data-linenumber="154">
           
           
           <code class="ruby">    @board[row][column.to_i - 1] = &quot;H&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="153">
+        <li class="never" data-hits="" data-linenumber="155">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="154">
+        <li class="never" data-hits="" data-linenumber="156">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="155">
+        <li class="covered" data-hits="1" data-linenumber="157">
           <span class="hits">1</span>
           
           <code class="ruby">  def find_and_hit_ship(coord)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="156">
+        <li class="missed" data-hits="0" data-linenumber="158">
           
           
           <code class="ruby">    formatted_coord = format_letters(coord)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="157">
+        <li class="missed" data-hits="0" data-linenumber="159">
           
           
           <code class="ruby">    row, column = formatted_coord</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="158">
+        <li class="missed" data-hits="0" data-linenumber="160">
           
           
           <code class="ruby">    ship = @board[row][column.to_i - 1]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="159">
+        <li class="missed" data-hits="0" data-linenumber="161">
           
           
           <code class="ruby">    ship.hit</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="160">
+        <li class="missed" data-hits="0" data-linenumber="162">
           
           
           <code class="ruby">    ship</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="161">
+        <li class="never" data-hits="" data-linenumber="163">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="162">
+        <li class="never" data-hits="" data-linenumber="164">
           
           
           <code class="ruby">end</code>
@@ -2178,26 +2316,26 @@
           <code class="ruby">  def initialize(size)</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="4">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="4">
+          <span class="hits">20</span>
           
           <code class="ruby">    @size = size</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="5">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="5">
+          <span class="hits">20</span>
           
           <code class="ruby">    @placed = false</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="6">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="6">
+          <span class="hits">20</span>
           
           <code class="ruby">    @hit_counter = 0</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="7">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="7">
+          <span class="hits">20</span>
           
           <code class="ruby">    @sunk = false</code>
         </li>

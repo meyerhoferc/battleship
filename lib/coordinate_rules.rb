@@ -65,10 +65,23 @@ module CoordinateRules
     ledger.board[middle_row][middle_column] == 0 ? true : false
   end
 
-  def self.all_three_adjacent(ledger, coords)
+  def self.all_three_adjacent?(ledger, coords)
     coord_1, coord_2 = ledger.format_pairs(coords)
-    # check horizontal ? 2 indices, no wraps
-    # check vertical ? 8 indices, no wraps
+    formatted_coords = ledger.format_letters(coords)
+    row_1, column_1, space, row_2, column_2 = formatted_coords
+    if row_1 == row_2
+      coord_1_index = @available_coords.index(coord_1)
+      coord_2_index = @available_coords.index(coord_2)
+      difference = coord_1_index - coord_2_index
+      difference.abs == 2 ? true : false
+    elsif column_1 == column_2
+      coord_1_index = @available_coords.index(coord_1)
+      coord_2_index = @available_coords.index(coord_2)
+      difference = coord_1_index - coord_2_index
+      difference.abs == 8 ? true : false
+    else
+      false
+    end
   end
 
   def self.coords_nil?(ledger, coords)
