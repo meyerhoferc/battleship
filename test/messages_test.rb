@@ -29,7 +29,7 @@ class MessagesTest < Minitest::Test
 
   def test_battleship_has_a_setting
     message = """
-    \nIn the usually tranquil zone of Undercity, you are Anklesmiter, a goblin shadowpriest being challenged to a Battleship duel from a lowly human paladin.
+    \nIn the usually tranquil zone of Undercity, you are Anklesmiter, a goblin shadowpriest being challenged to a Battleship duel from Gretchen, a lowly human paladin.
     \nYou must defend the honor of the Horde. Dark Lady watch over you, Anklesmiter.
     """
     assert_equal message, Messages.setting
@@ -61,12 +61,12 @@ class MessagesTest < Minitest::Test
   end
 
   def test_gives_message_when_hit_ship
-    message = "\nYou hit the ship!\nHere's a updated view:\n"
+    message = "\n[Gretchen]: You hit my ship!\nHere's a updated view:\n"
     assert_equal message, Messages.hit_ship
   end
 
   def test_gives_message_when_you_miss_ship
-    message = "\nYou missed the ship!\nHere's a updated view:\n"
+    message = "\n[Gretchen]: You missed my ship!\nHere's a updated view:\n"
     assert_equal message, Messages.miss_ship
   end
 
@@ -81,12 +81,12 @@ class MessagesTest < Minitest::Test
   end
 
   def test_gives_message_when_computer_sinks_ship
-    message = "\nI have sunk your ship! The Light shall prevail!"
+    message = "\n[Gretchen]: I have sunk your ship! The Light shall prevail!"
     assert_equal message, Messages.computer_sunk_ship
   end
 
   def test_gives_message_when_player_sinks_ship
-    message = "\nYou sank my ship, but it's not a big deal. The Light shall burn you!"
+    message = "\n[Gretchen]: You sank my ship, but it's not a big deal. The Light shall burn you!"
     assert_equal message, Messages.sunk_ship
   end
 
@@ -96,12 +96,12 @@ class MessagesTest < Minitest::Test
   end
 
   def test_gives_message_when_computer_misses_ship
-    message = "\nI missed the ship!"
+    message = "\n[Gretchen]: I missed your ship!"
     assert_equal message, Messages.computer_miss_ship
   end
 
   def test_gives_message_when_computer_hit_ship
-    message = "\nI hit your ship! I will eventually sink all your ships!"
+    message = "\n[Gretchen]: I hit your ship! I will eventually sink all your ships!"
     assert_equal message, Messages.computer_hit_ship
   end
 end

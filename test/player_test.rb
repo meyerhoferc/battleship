@@ -145,12 +145,4 @@ class PlayerTest < Minitest::Test
     refute player.fire(opponent.ship_board, coord_3)
   end
 
-  def test_can_make_a_shot_at_opponent
-    opponent.place_ships_on_board
-    coords = "C2"
-    assert player.fire(opponent.ship_board, coords)
-    assert player.shots_fired.board.contains?("H") || player.shots_fired.board.contains?("M")
-  end
-
-
 end

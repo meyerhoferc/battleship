@@ -21,7 +21,7 @@ module Messages
 
   def self.setting
     """
-    \nIn the usually tranquil zone of Undercity, you are Anklesmiter, a goblin shadowpriest being challenged to a Battleship duel from a lowly human paladin.
+    \nIn the usually tranquil zone of Undercity, you are Anklesmiter, a goblin shadowpriest being challenged to a Battleship duel from Gretchen, a lowly human paladin.
     \nYou must defend the honor of the Horde. Dark Lady watch over you, Anklesmiter.
     """
   end
@@ -47,19 +47,19 @@ module Messages
   end
 
   def self.computer_hit_ship
-    "\nI hit your ship! I will eventually sink all your ships!"
+    "\n[Gretchen]: I hit your ship! I will eventually sink all your ships!"
   end
 
   def self.computer_miss_ship
-    "\nI missed the ship!"
+    "\n[Gretchen]: I missed your ship!"
   end
 
   def self.hit_ship
-    "\nYou hit the ship!\nHere's a updated view:\n"
+    "\n[Gretchen]: You hit my ship!\nHere's a updated view:\n"
   end
 
   def self.miss_ship
-    "\nYou missed the ship!\nHere's a updated view:\n"
+    "\n[Gretchen]: You missed my ship!\nHere's a updated view:\n"
   end
 
   def self.invalid_entry
@@ -71,11 +71,11 @@ module Messages
   end
 
   def self.computer_sunk_ship
-    "\nI have sunk your ship! The Light shall prevail!"
+    "\n[Gretchen]: I have sunk your ship! The Light shall prevail!"
   end
 
   def self.sunk_ship
-    "\nYou sank my ship, but it's not a big deal. The Light shall burn you!"
+    "\n[Gretchen]: You sank my ship, but it's not a big deal. The Light shall burn you!"
   end
 
   def self.prompt_for_coords
