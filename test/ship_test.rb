@@ -56,5 +56,4 @@ class ShipTest < Minitest::Test
     assert ship_1.sunk?
     assert ship_2.sunk?
   end
-
 end

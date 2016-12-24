@@ -23,11 +23,10 @@ class Ship
     @hit_counter += 1
     if @hit_counter == @size
       @sunk = true
-    end 
+    end
   end
 
   def sunk?
     @sunk
   end
-
 end

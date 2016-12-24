@@ -96,5 +96,4 @@ module CoordinateRules
     @available_coords.index(coord_1).nil? ? true : false
     @available_coords.index(coord_2).nil? ? true : false
   end
-
 end

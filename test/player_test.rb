@@ -150,5 +150,4 @@ class PlayerTest < Minitest::Test
     refute player.fire(opponent.ship_board, coord_2)
     refute player.fire(opponent.ship_board, coord_3)
   end
-
 end
