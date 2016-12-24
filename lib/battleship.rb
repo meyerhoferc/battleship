@@ -122,7 +122,7 @@ class BattleShip
       end_game_sequence("opponent", opponent.shots)
     else
       puts "\nIt was a tie!"
-      end_game_sequence(tie)
+      end_game_sequence("tie", player.shots)
     end
   end
 
@@ -169,7 +169,11 @@ class BattleShip
     @final_time = Time.now
     time_elapsed = (@final_time - @initial_time).round
     puts Messages.total_time(time_elapsed)
-    puts Messages.winner_shots(winner_name, shots)
+    if winner_name == "tie"
+      puts "No one wins :("
+    else
+      puts Messages.winner_shots(winner_name, shots)
+    end
   end
 end
 
