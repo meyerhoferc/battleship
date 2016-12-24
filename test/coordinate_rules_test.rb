@@ -31,11 +31,13 @@ class CoordinateRulesTest < Minitest::Test
     coords_3 = "A1 C1"
     coords_4 = "A2 D2"
     coords_5 = "D1 D2"
+    coords_6 = "A1 A4"
 
     assert CoordinateRules.ship_length_equals_coord_length(ledger, ship_1, coords_1)
     assert CoordinateRules.ship_length_equals_coord_length(ledger, ship_1, coords_2)
     refute CoordinateRules.ship_length_equals_coord_length(ledger, ship_1, coords_3)
     refute CoordinateRules.ship_length_equals_coord_length(ledger, ship_1, coords_4)
+    refute CoordinateRules.ship_length_equals_coord_length(ledger, ship_1, coords_6)
 
     refute CoordinateRules.ship_length_equals_coord_length(ledger, ship_2, coords_1)
     refute CoordinateRules.ship_length_equals_coord_length(ledger, ship_2, coords_2)

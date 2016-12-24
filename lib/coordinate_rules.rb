@@ -17,11 +17,17 @@ module CoordinateRules
   end
 
   def self.ship_length_equals_coord_length(ledger, ship, coords)
-    formatted_coords = ledger.format_pairs(coords)
-    coord_1, coord_2 = formatted_coords
+    coord_1, coord_2 = ledger.format_pairs(coords)
     difference = @available_coords.index(coord_1) - @available_coords.index(coord_2)
+    row_1, column_1, space, row_2, column_2 = ledger.format_letters(coords)
     if ship.size == 2
-      difference.abs == 1 || difference.abs == 4 ? true : false
+      if row_1 == row_2
+        difference.abs == 1 ? true : false
+      elsif column_1 == column_2
+        difference.abs == 4 ? true : false
+      else
+        false
+      end
     elsif ship.size == 3
       difference.abs == 2 || difference.abs == 8 ? true : false
     else

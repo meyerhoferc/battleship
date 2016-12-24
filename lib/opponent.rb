@@ -101,10 +101,14 @@ class Opponent
     if row_1 == "A"
       coord_1_index = @possible_firing_locations.index(coord_1)
       coord_2 = @possible_firing_locations[coord_1_index + 8]
+      middle_coord = @possible_firing_locations[coord_1_index + 4]
+      check_for_duplicates(middle_coord) ? pick_coordinate_set(@ship_2) : true
       check_for_duplicates(coord_2) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2
     elsif row_1 == "D"
       coord_1_index = @possible_firing_locations.index(coord_1)
       coord_2 = @possible_firing_locations[coord_1_index - 8]
+      middle_coord = @possible_firing_locations[coord_1_index - 4]
+      check_for_duplicates(middle_coord) ? pick_coordinate_set(@ship_2) : true
       check_for_duplicates(coord_2) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2
     else
       coord_1_index = @possible_firing_locations.index(coord_1)
@@ -120,10 +124,14 @@ class Opponent
     if column_1 == "1"
       coord_1_index = @possible_firing_locations.index(coord_1)
       coord_2 = @possible_firing_locations[coord_1_index + 2]
+      middle_coord = @possible_firing_locations[coord_1_index + 1]
+      check_for_duplicates(middle_coord) ? pick_coordinate_set(@ship_2) : true
       check_for_duplicates(coord_2) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2
     elsif column_1 == "4"
       coord_1_index = @possible_firing_locations.index(coord_1)
       coord_2 = @possible_firing_locations[coord_1_index - 2]
+      middle_coord = @possible_firing_locations[coord_1_index - 1]
+      check_for_duplicates(middle_coord) ? pick_coordinate_set(@ship_2) : true
       check_for_duplicates(coord_2) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2
     else
       coord_1_index = @possible_firing_locations.index(coord_1)

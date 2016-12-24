@@ -92,13 +92,20 @@ class Ledger
     exist && size && empty && adjacent
   end
 
+
   def valid_and_available_coords?(ship, coords)
-    unless coords_nil?(coords)
-      all_rules_pass?(ship, coords)
-      if ship.size == 3
-        empty = CoordinateRules.all_three_empty?(self, coords) ? true : false
-        adjacent = CoordinateRules.all_three_adjacent?(self, coords) ? true : false
-        empty && adjacent
+    if coords_nil?(coords)
+      false
+    else
+      if all_rules_pass?(ship, coords)
+        if ship.size == 3
+          empty = CoordinateRules.all_three_empty?(self, coords) ? true : false
+          adjacent = CoordinateRules.all_three_adjacent?(self, coords) ? true : false
+          empty && adjacent
+        end
+        true
+      else
+        false
       end
       true
     end

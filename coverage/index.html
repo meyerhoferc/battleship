@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.0/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.0/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_green.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_red.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.0/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-23T17:06:26-07:00">2016-12-23T17:06:26-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-23T19:23:23-07:00">2016-12-23T19:23:23-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="red">53.56%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         7.1
+         4.96
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>1</b> files in total.
-    <b>19</b> relevant lines. 
-    <span class="green"><b>19</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>7</b> files in total.
+    <b>379</b> relevant lines. 
+    <span class="green"><b>203</b> lines covered</span> and
+    <span class="red"><b>176</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -51,13 +51,73 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#17c0619a984948e85799f53c692de4b5fce2176a" class="src_link" title="lib/ship.rb">lib/ship.rb</a></td>
+        <td class="strong"><a href="#d040634ee45724f8b9458f575c8061dc528fa3a9" class="src_link" title="lib/coordinate_rules.rb">lib/coordinate_rules.rb</a></td>
+        <td class="red strong">57.97 %</td>
+        <td>100</td>
+        <td>69</td>
+        <td>40</td>
+        <td>29</td>
+        <td>2.8</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#3c272f163f75dffd3285b8afa3ba1b8ae0bbd287" class="src_link" title="lib/firing_rules.rb">lib/firing_rules.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>9</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>4.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#0ed0f7e7301faa875bd661e9811b012d64aea8a8" class="src_link" title="lib/ledger.rb">lib/ledger.rb</a></td>
+        <td class="red strong">56.86 %</td>
+        <td>160</td>
+        <td>102</td>
+        <td>58</td>
+        <td>44</td>
+        <td>9.9</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#c9140091186d27710f44f0bb3fe7d35d43c2f25a" class="src_link" title="lib/messages.rb">lib/messages.rb</a></td>
+        <td class="red strong">50.0 %</td>
+        <td>93</td>
+        <td>40</td>
+        <td>20</td>
+        <td>20</td>
+        <td>0.5</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#91c05e7675cbdeac8bebe2f04c9403aad23b0c51" class="src_link" title="lib/opponent.rb">lib/opponent.rb</a></td>
+        <td class="red strong">29.31 %</td>
+        <td>168</td>
+        <td>116</td>
+        <td>34</td>
+        <td>82</td>
+        <td>1.6</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#44d27dea47ad60063bc7860db3610637f4b9c7f2" class="src_link" title="lib/player.rb">lib/player.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>50</td>
+        <td>29</td>
+        <td>29</td>
+        <td>0</td>
+        <td>6.8</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#17c0619a984948e85799f53c692de4b5fce2176a" class="src_link" title="lib/ship.rb">lib/ship.rb</a></td>
+        <td class="green strong">94.74 %</td>
         <td>33</td>
         <td>19</td>
-        <td>19</td>
-        <td>0</td>
-        <td>7.1</td>
+        <td>18</td>
+        <td>1</td>
+        <td>13.6</td>
       </tr>
       
     </tbody>
@@ -76,14 +136,3602 @@
     
       <div class="source_files">
       
+        <div class="source_table" id="d040634ee45724f8b9458f575c8061dc528fa3a9">
+  <div class="header">
+    <h3>lib/coordinate_rules.rb</h3>
+    <h4><span class="red">57.97 %</span> covered</h4>
+    <div>
+      <b>69</b> relevant lines. 
+      <span class="green"><b>40</b> lines covered</span> and
+      <span class="red"><b>29</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/ledger.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/ship.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;pry&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module CoordinateRules</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  @available_coords = [&quot;A1&quot;, &quot;A2&quot;, &quot;A3&quot;, &quot;A4&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">                      &quot;B1&quot;, &quot;B2&quot;, &quot;B3&quot;, &quot;B4&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">                      &quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;, &quot;C4&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">                      &quot;D1&quot;, &quot;D2&quot;, &quot;D3&quot;, &quot;D4&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.coords_exist?(ledger, coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="13">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    formatted_coords = ledger.format_pairs(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="14">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    coord_1, coord_2 = formatted_coords</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="15">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    @available_coords.include?(coord_1)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="16">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    @available_coords.include?(coord_2)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.ship_length_equals_coord_length(ledger, ship, coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="20">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    coord_1, coord_2 = ledger.format_pairs(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="21">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    difference = @available_coords.index(coord_1) - @available_coords.index(coord_2)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="22">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    row_1, column_1, space, row_2, column_2 = ledger.format_letters(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="23">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    if ship.size == 2</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="24">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      if row_1 == row_2</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="25">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        difference.abs == 1 ? true : false</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="26">
+          
+          
+          <code class="ruby">      elsif column_1 == column_2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="27">
+          
+          
+          <code class="ruby">        difference.abs == 4 ? true : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
+          
+          <code class="ruby">        false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="31">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    elsif ship.size == 3</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="32">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      difference.abs == 2 || difference.abs == 8 ? true : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.coords_empty?(ledger, coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="38">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    formatted_coords = ledger.format_letters(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="39">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    row_1, column_1, space, row_2, column_2 = formatted_coords</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="40">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    ledger.board[row_1][column_1.to_i - 1] == 0 ? true : false</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="41">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    ledger.board[row_2][column_2.to_i - 1] == 0 ? true : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.coordinates_adjacent?(ledger, coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="45">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    coord_1, coord_2 = ledger.format_pairs(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="46">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    formatted_coords = ledger.format_letters(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="47">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    row_1, column_1, space, row_2, column_2 = formatted_coords</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="48">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    row_1 == row_2 || column_1 == column_2 ? true : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="50">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    coord_1_index = @available_coords.index(coord_1)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="51">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    coord_2_index = @available_coords.index(coord_2)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="52">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    difference = coord_1_index - coord_2_index</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="53">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    difference.abs == 1 || difference.abs == 4 ? true : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.all_three_empty?(ledger, coords)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="57">
+          
+          
+          <code class="ruby">    formatted_coords = ledger.format_letters(coords)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="58">
+          
+          
+          <code class="ruby">    row_1, column_1, space, row_2, column_2 = formatted_coords</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="59">
+          
+          
+          <code class="ruby">    if row_1 == row_2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="60">
+          
+          
+          <code class="ruby">      middle_row = row_1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="61">
+          
+          
+          <code class="ruby">      column_1.to_i &gt; column_2.to_i ? middle_column = (column_2.to_i) : middle_column = (column_1.to_i)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby">    elsif column_1 == column_2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="63">
+          
+          
+          <code class="ruby">      middle_column = column_1.to_i - 1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="64">
+          
+          
+          <code class="ruby">      row_1_c = row_1.codepoints.first</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="65">
+          
+          
+          <code class="ruby">      row_2_c = row_2.codepoints.first</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="66">
+          
+          
+          <code class="ruby">      row_1_c &gt; row_2_c ? middle_row = [row_2_c + 1].pack(&quot;U*&quot;) : middle_row = [row_1_c + 1].pack(&quot;U*&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="69">
+          
+          
+          <code class="ruby">    ledger.board[row_1][column_1.to_i - 1] == 0 ? true : false</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="70">
+          
+          
+          <code class="ruby">    ledger.board[row_2][column_2.to_i - 1] == 0 ? true : false</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="71">
+          
+          
+          <code class="ruby">    ledger.board[middle_row][middle_column] == 0 ? true : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.all_three_adjacent?(ledger, coords)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="75">
+          
+          
+          <code class="ruby">    coord_1, coord_2 = ledger.format_pairs(coords)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="76">
+          
+          
+          <code class="ruby">    formatted_coords = ledger.format_letters(coords)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="77">
+          
+          
+          <code class="ruby">    row_1, column_1, space, row_2, column_2 = formatted_coords</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="78">
+          
+          
+          <code class="ruby">    if row_1 == row_2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="79">
+          
+          
+          <code class="ruby">      coord_1_index = @available_coords.index(coord_1)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="80">
+          
+          
+          <code class="ruby">      coord_2_index = @available_coords.index(coord_2)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="81">
+          
+          
+          <code class="ruby">      difference = coord_1_index - coord_2_index</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="82">
+          
+          
+          <code class="ruby">      difference.abs == 2 ? true : false</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="83">
+          
+          
+          <code class="ruby">    elsif column_1 == column_2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="84">
+          
+          
+          <code class="ruby">      coord_1_index = @available_coords.index(coord_1)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="85">
+          
+          
+          <code class="ruby">      coord_2_index = @available_coords.index(coord_2)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="86">
+          
+          
+          <code class="ruby">      difference = coord_1_index - coord_2_index</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="87">
+          
+          
+          <code class="ruby">      difference.abs == 8 ? true : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="89">
+          
+          
+          <code class="ruby">      false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="93">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.coords_nil?(ledger, coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="94">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    formatted_coords = ledger.format_pairs(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="95">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    coord_1, coord_2 = formatted_coords</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="96">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    @available_coords.index(coord_1).nil? ? true : false</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="97">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    @available_coords.index(coord_2).nil? ? true : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="100">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="3c272f163f75dffd3285b8afa3ba1b8ae0bbd287">
+  <div class="header">
+    <h3>lib/firing_rules.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module FiringRules</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  @possible_locations = [&quot;A1&quot;, &quot;A2&quot;, &quot;A3&quot;, &quot;A4&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">                      &quot;B1&quot;, &quot;B2&quot;, &quot;B3&quot;, &quot;B4&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">                      &quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;, &quot;C4&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">                      &quot;D1&quot;, &quot;D2&quot;, &quot;D3&quot;, &quot;D4&quot;]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.coords_exist?(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="13" data-linenumber="7">
+          <span class="hits">13</span>
+          
+          <code class="ruby">    @possible_locations.include?(coords)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="0ed0f7e7301faa875bd661e9811b012d64aea8a8">
+  <div class="header">
+    <h3>lib/ledger.rb</h3>
+    <h4><span class="red">56.86 %</span> covered</h4>
+    <div>
+      <b>102</b> relevant lines. 
+      <span class="green"><b>58</b> lines covered</span> and
+      <span class="red"><b>44</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/ship.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/messages.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/coordinate_rules.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;pry&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Ledger</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  include CoordinateRules</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_reader :difficulty,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">              :board</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize(difficulty = 1)</code>
+        </li>
+      
+        <li class="covered" data-hits="84" data-linenumber="12">
+          <span class="hits">84</span>
+          
+          <code class="ruby">    @difficulty = difficulty</code>
+        </li>
+      
+        <li class="covered" data-hits="84" data-linenumber="13">
+          <span class="hits">84</span>
+          
+          <code class="ruby">    @board = Hash.new</code>
+        </li>
+      
+        <li class="covered" data-hits="84" data-linenumber="14">
+          <span class="hits">84</span>
+          
+          <code class="ruby">    @board[&#39;.&#39;] = [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;]</code>
+        </li>
+      
+        <li class="covered" data-hits="84" data-linenumber="15">
+          <span class="hits">84</span>
+          
+          <code class="ruby">    letters = [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;]</code>
+        </li>
+      
+        <li class="covered" data-hits="84" data-linenumber="16">
+          <span class="hits">84</span>
+          
+          <code class="ruby">    letters.each do |letter|</code>
+        </li>
+      
+        <li class="covered" data-hits="336" data-linenumber="17">
+          <span class="hits">336</span>
+          
+          <code class="ruby">      @board[letter] = Array.new(4, 0)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def print_board</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="22">
+          
+          
+          <code class="ruby">    keys = @board.keys</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
+          
+          <code class="ruby">    columns = @board[keys[0]]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
+          
+          <code class="ruby">    row_1 = @board[keys[1]]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="25">
+          
+          
+          <code class="ruby">    row_2 = @board[keys[2]]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="26">
+          
+          
+          <code class="ruby">    row_3 = @board[keys[3]]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="27">
+          
+          
+          <code class="ruby">    row_4 = @board[keys[4]]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
+          
+          <code class="ruby">    row_1_new = []</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
+          
+          <code class="ruby">    row_2_new = []</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="30">
+          
+          
+          <code class="ruby">    row_3_new = []</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
+          
+          <code class="ruby">    row_4_new = []</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="32">
+          
+          
+          <code class="ruby">    make_row_printable(row_1, row_1_new)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="33">
+          
+          
+          <code class="ruby">    make_row_printable(row_2, row_2_new)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="34">
+          
+          
+          <code class="ruby">    make_row_printable(row_3, row_3_new)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="35">
+          
+          
+          <code class="ruby">    make_row_printable(row_4, row_4_new)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="36">
+          
+          
+          <code class="ruby">    border = &#39;============&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
+          
+          <code class="ruby">    printed_board = &quot;&quot;&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">    #{border}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">    #{keys[0]} #{columns[0]} #{columns[1]} #{columns[2]} #{columns[3]}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">    #{keys[1]} #{row_1_new[0]} #{row_1_new[1]} #{row_1_new[2]} #{row_1_new[3]} #{row_1_new[4]}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">    #{keys[2]} #{row_2_new[0]} #{row_2_new[1]} #{row_2_new[2]} #{row_2_new[3]} #{row_2_new[4]}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">    #{keys[3]} #{row_3_new[0]} #{row_3_new[1]} #{row_3_new[2]} #{row_3_new[3]} #{row_3_new[4]}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">    #{keys[4]} #{row_4_new[0]} #{row_4_new[1]} #{row_4_new[2]} #{row_4_new[3]} #{row_4_new[4]}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby">    #{border}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">    &quot;&quot;&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def make_row_printable(row, new_row)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="49">
+          
+          
+          <code class="ruby">    row.each do |i|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="50">
+          
+          
+          <code class="ruby">      if i == 0</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="51">
+          
+          
+          <code class="ruby">        i = &quot; &quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="53">
+          
+          
+          <code class="ruby">      new_row &lt;&lt; i</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def has_ship?(ship)</code>
+        </li>
+      
+        <li class="covered" data-hits="29" data-linenumber="58">
+          <span class="hits">29</span>
+          
+          <code class="ruby">    @board.values.any? { |value| value.include?(ship) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def format_pairs(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="28" data-linenumber="62">
+          <span class="hits">28</span>
+          
+          <code class="ruby">    coords.split</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="65">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def format_letters(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="31" data-linenumber="66">
+          <span class="hits">31</span>
+          
+          <code class="ruby">    coords.chars</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="69">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def insert(ship, coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="70">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    if valid_and_available_coords?(ship, coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="71">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      row_1, column_1, space, row_2, column_2 = format_letters(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="72">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      @board[row_1][column_1.to_i - 1] = ship</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="73">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      @board[row_2][column_2.to_i - 1] = ship</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="74">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      if ship.size == 3</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="75">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        mark_middle_spot(ship, coords)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="77">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      ship.place_on_board</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="79">
+          
+          
+          <code class="ruby">      false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def coords_nil?(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="84">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    CoordinateRules.coords_nil?(self, coords)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def all_rules_pass?(ship, coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="88">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    exist = CoordinateRules.coords_exist?(self, coords) ? true : false</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="89">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    empty = CoordinateRules.coords_empty?(self, coords) ? true : false</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="90">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    size = CoordinateRules.ship_length_equals_coord_length(self, ship, coords) ? true : false</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="91">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    adjacent = CoordinateRules.coordinates_adjacent?(self, coords) ? true : false</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="92">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    exist &amp;&amp; size &amp;&amp; empty &amp;&amp; adjacent</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="94">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="96">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def valid_and_available_coords?(ship, coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="97">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    if coords_nil?(coords)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="98">
+          
+          
+          <code class="ruby">      false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="100">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      if all_rules_pass?(ship, coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="101">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        if ship.size == 3</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="102">
+          
+          
+          <code class="ruby">          empty = CoordinateRules.all_three_empty?(self, coords) ? true : false</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="103">
+          
+          
+          <code class="ruby">          adjacent = CoordinateRules.all_three_adjacent?(self, coords) ? true : false</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="104">
+          
+          
+          <code class="ruby">          empty &amp;&amp; adjacent</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="105">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="106">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="107">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="108">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="110">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="111">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="112">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="113">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="114">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def mark_middle_spot(ship, coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="115">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    row_1, column_1, space, row_2, column_2 = format_letters(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="116">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    if row_1 == row_2 # horizontal</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="117">
+          
+          
+          <code class="ruby">      middle_row = row_1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="118">
+          
+          
+          <code class="ruby">      column_1.to_i &gt; column_2.to_i ? middle_column = (column_2.to_i) : middle_column = (column_1.to_i)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby">    elsif column_1 == column_2 # vertical</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="120">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      middle_column = column_1.to_i - 1</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="121">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      row_1_c = row_1.codepoints.first</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="122">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      row_2_c = row_2.codepoints.first</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="123">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      row_1_c &gt; row_2_c ? middle_row = [row_2_c + 1].pack(&quot;U*&quot;) : middle_row = [row_1_c + 1].pack(&quot;U*&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="124">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="125">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="126">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @board[middle_row][middle_column] = ship</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="127">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="128">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="129">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def contains_ship?(coord)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="130">
+          
+          
+          <code class="ruby">    formatted_coord = format_letters(coord)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="131">
+          
+          
+          <code class="ruby">    row, column = formatted_coord</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="132">
+          
+          
+          <code class="ruby">    @board[row][column.to_i - 1] == 0 ? false : true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="133">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="134">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="135">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def coordinate_struck?(coord)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="136">
+          
+          
+          <code class="ruby">    formatted_coord = format_letters(coord)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="137">
+          
+          
+          <code class="ruby">    row, column = formatted_coord</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="138">
+          
+          
+          <code class="ruby">    @board[row][column.to_i - 1] == 0 ? false : true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="139">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="140">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="141">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def mark_as_missed(coord)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="142">
+          
+          
+          <code class="ruby">    formatted_coord = format_letters(coord)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="143">
+          
+          
+          <code class="ruby">    row, column = formatted_coord</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="144">
+          
+          
+          <code class="ruby">    @board[row][column.to_i - 1] = &quot;M&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="145">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="146">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="147">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def mark_as_hit(coord)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="148">
+          
+          
+          <code class="ruby">    formatted_coord = format_letters(coord)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="149">
+          
+          
+          <code class="ruby">    row, column = formatted_coord</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="150">
+          
+          
+          <code class="ruby">    @board[row][column.to_i - 1] = &quot;H&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="151">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="152">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="153">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def find_and_hit_ship(coord)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="154">
+          
+          
+          <code class="ruby">    formatted_coord = format_letters(coord)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="155">
+          
+          
+          <code class="ruby">    row, column = formatted_coord</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="156">
+          
+          
+          <code class="ruby">    ship = @board[row][column.to_i - 1]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="157">
+          
+          
+          <code class="ruby">    ship.hit</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="158">
+          
+          
+          <code class="ruby">    ship</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="159">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="160">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="c9140091186d27710f44f0bb3fe7d35d43c2f25a">
+  <div class="header">
+    <h3>lib/messages.rb</h3>
+    <h4><span class="red">50.0 %</span> covered</h4>
+    <div>
+      <b>40</b> relevant lines. 
+      <span class="green"><b>20</b> lines covered</span> and
+      <span class="red"><b>20</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module Messages</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.begin_game</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="3">
+          
+          
+          <code class="ruby">    &quot;\nWelcome to BATTLESHIP&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.beginning_prompt</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="7">
+          
+          
+          <code class="ruby">    &quot;\nWould you like to (p)lay, read the (i)nstructions, or (q)uit?&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.instructions</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">    &quot;&quot;&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">    \nWhen prompted, select coords where you would like to place the ship.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">    \nYou will enter the coordinates for the ships of your fleet, one with a length of two units and the other with a length of three units.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    \nI will tell you if your coordinates are valid. They must obey these rules:</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">    \n\t1. Ships cannot overlap each other.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">    \n\t2. Ships cannot wrap around the edges of the board, as they are not bendy.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">    \n\t3. Ship orientation must be horizontal or vertical, never diagonal.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">    \n\t4. Ship coordinates must match the size of the ship.</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
+          
+          <code class="ruby">    \n\t5. Ship coordinates must coorespond to existing rows and columns in the board.&quot;&quot;&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.setting</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">    &quot;&quot;&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    \nIn the usually tranquil zone of Undercity, you are Anklesmiter, a goblin shadowpriest being challenged to a Battleship duel from Gretchen, a lowly human paladin.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">    \nYou must defend the honor of the Horde. Dark Lady watch over you, Anklesmiter.</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="26">
+          
+          
+          <code class="ruby">    &quot;&quot;&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.threaten</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="30">
+          
+          
+          <code class="ruby">    &quot;\n[Gretchen]: I WILL CRUSH YOU....with my ships.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.admits_defeat</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="34">
+          
+          
+          <code class="ruby">    &quot;\n[Gretchen]: Well played, Anklesmiter. You have bested me.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.admits_victory</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="38">
+          
+          
+          <code class="ruby">    &quot;\n[Gretchen]: Well played, Anklesmiter. You cannot defeat the Light.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.finished_entering_ships</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">    &quot;\n[Gretchen]: I have laid out my ships on the grid.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">    \nYou now need to layout your two ships.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby">    \nThe first is two units long and the second is three units long.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">    \nThe grid has A1 at the top left and D4 at the bottom right.</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="46">
+          
+          
+          <code class="ruby">    \nEnter the squares for the two-unit ship:\n&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.computer_hit_ship</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="50">
+          
+          
+          <code class="ruby">    &quot;\n[Gretchen]: I hit your ship! I will eventually sink all your ships!&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.computer_miss_ship</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="54">
+          
+          
+          <code class="ruby">    &quot;\n[Gretchen]: I missed your ship!&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.hit_ship</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="58">
+          
+          
+          <code class="ruby">    &quot;\n[Gretchen]: You hit my ship!\nHere&#39;s a updated view:\n&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.miss_ship</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="62">
+          
+          
+          <code class="ruby">    &quot;\n[Gretchen]: You missed my ship!\nHere&#39;s a updated view:\n&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="65">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.invalid_entry</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="66">
+          
+          
+          <code class="ruby">    &quot;\nUnfortunately, that input was invalid. Please try again:\n&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="69">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.second_ship</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="70">
+          
+          
+          <code class="ruby">    &quot;\nEnter coordinates for your second ship. Make sure these are for a ship of 3 units in length.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.computer_sunk_ship</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="74">
+          
+          
+          <code class="ruby">    &quot;\n[Gretchen]: I have sunk your ship! The Light shall prevail!&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="77">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.sunk_ship</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="78">
+          
+          
+          <code class="ruby">    &quot;\n[Gretchen]: You sank my ship, but it&#39;s not a big deal. The Light shall burn you!&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="81">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.prompt_for_coords</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="82">
+          
+          
+          <code class="ruby">    &quot;\nEnter the coordinates you would like to fire at.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="85">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.total_time(time)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="86">
+          
+          
+          <code class="ruby">    &quot;\nThe total time of the game was #{time} seconds long.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.winner_shots(person, shots)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="90">
+          
+          
+          <code class="ruby">    person == &quot;player&quot; ? person = &quot;You&quot; : person = &quot;I&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="91">
+          
+          
+          <code class="ruby">    &quot;\n#{person} took #{shots} shots in order to win.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="91c05e7675cbdeac8bebe2f04c9403aad23b0c51">
+  <div class="header">
+    <h3>lib/opponent.rb</h3>
+    <h4><span class="red">29.31 %</span> covered</h4>
+    <div>
+      <b>116</b> relevant lines. 
+      <span class="green"><b>34</b> lines covered</span> and
+      <span class="red"><b>82</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/ship.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/ledger.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/messages.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/coordinate_rules.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;pry&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Opponent</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_reader :ship_board,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">              :shots_fired,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">              :collection,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">              :fleet,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">              :shots</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="14">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @ship_board = Ledger.new</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="15">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @shots_fired = Ledger.new</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="16">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @collection = [@ship_board, @shots_fired]</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="17">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @ship_1 = Ship.new(2)</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="18">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @ship_2 = Ship.new(3)</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="19">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @fleet = [@ship_1, @ship_2]</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="20">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @possible_firing_locations = []</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="21">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @current_ship_placements = []</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="22">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @currently_used_coordinates = []</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="23">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @shots = 0</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="24">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    update_possible_firing_locations</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def update_possible_firing_locations</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="28">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @possible_firing_locations = [&quot;A1&quot;, &quot;A2&quot;, &quot;A3&quot;, &quot;A4&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">                        &quot;B1&quot;, &quot;B2&quot;, &quot;B3&quot;, &quot;B4&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">                        &quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;, &quot;C4&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">                        &quot;D1&quot;, &quot;D2&quot;, &quot;D3&quot;, &quot;D4&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def pick_orientation</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="35">
+          
+          
+          <code class="ruby">    orientations = [&#39;horizontal&#39;, &#39;vertical&#39;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="36">
+          
+          
+          <code class="ruby">    orientations.shuffle.first</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def pick_first_coordinate</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="40">
+          
+          
+          <code class="ruby">    @possible_firing_locations.shuffle.first</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def pick_coordinate_set(ship)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="44">
+          
+          
+          <code class="ruby">    orientation = pick_orientation</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="45">
+          
+          
+          <code class="ruby">    @coord_1 = pick_first_coordinate</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="46">
+          
+          
+          <code class="ruby">    if ship.size == 2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="47">
+          
+          
+          <code class="ruby">      get_adjacent_coordinate(@coord_1, orientation)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="49">
+          
+          
+          <code class="ruby">      check_for_duplicates(@coord_1) ? pick_coordinate_set(ship) : true</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="50">
+          
+          
+          <code class="ruby">      check_size_three_coordinate(@coord_1, orientation)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def get_adjacent_coordinate(coord, orientation)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="55">
+          
+          
+          <code class="ruby">    @coord_1 = coord</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="56">
+          
+          
+          <code class="ruby">    row_1, column_1 = coord.chars</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="57">
+          
+          
+          <code class="ruby">    if orientation == &#39;horizontal&#39; &amp;&amp; column_1.to_i &lt; 4</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="58">
+          
+          
+          <code class="ruby">      coord_2_index = @possible_firing_locations.index(coord) + 1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="59">
+          
+          
+          <code class="ruby">      @coord_2 = @possible_firing_locations[coord_2_index]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="60">
+          
+          
+          <code class="ruby">    elsif orientation == &#39;horizontal&#39; &amp;&amp; column_1.to_i == 4</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="61">
+          
+          
+          <code class="ruby">      coord_2_index = @possible_firing_locations.index(coord) - 1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="62">
+          
+          
+          <code class="ruby">      @coord_2 = @possible_firing_locations[coord_2_index]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="63">
+          
+          
+          <code class="ruby">    elsif orientation == &#39;vertical&#39; &amp;&amp; row_1 == &#39;A&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="64">
+          
+          
+          <code class="ruby">      coord_2_index = @possible_firing_locations.index(coord) + 4</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="65">
+          
+          
+          <code class="ruby">      @coord_2 = @possible_firing_locations[coord_2_index]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="66">
+          
+          
+          <code class="ruby">    elsif orientation == &#39;vertical&#39; &amp;&amp; row_1 == &#39;D&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="67">
+          
+          
+          <code class="ruby">      coord_2_index = @possible_firing_locations.index(coord) - 4</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="68">
+          
+          
+          <code class="ruby">      @coord_2 = @possible_firing_locations[coord_2_index]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="69">
+          
+          
+          <code class="ruby">    elsif orientation == &#39;vertical&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="70">
+          
+          
+          <code class="ruby">      coord_2_index = @possible_firing_locations.index(coord) + 4</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="71">
+          
+          
+          <code class="ruby">      @coord_2 = @possible_firing_locations[coord_2_index]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="76">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def check_for_duplicates(coord)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="77">
+          
+          
+          <code class="ruby">    @currently_used_coordinates.include?(coord) ? true : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def check_size_three_coordinate(coord_1, orientation)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="81">
+          
+          
+          <code class="ruby">    row_1, column_1 = coord_1.chars</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="82">
+          
+          
+          <code class="ruby">    ship_1_row_1, ship_1_column_1, space, ship_1_row_2, ship_1_column_2 = @current_ship_placements[0].chars</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby">    if (row_1 == ship_1_row_1 &amp;&amp; column_1 == ship_1_column_1) ||</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="84">
+          
+          
+          <code class="ruby">      (row_1 == ship_1_row_2 &amp;&amp; column_1 == ship_1_column_2)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="85">
+          
+          
+          <code class="ruby">      pick_coordinate_set(@ship_2)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="87">
+          
+          
+          <code class="ruby">      get_size_three_coordinate(coord_1, orientation)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="91">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def get_size_three_coordinate(coord_1, orientation)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="92">
+          
+          
+          <code class="ruby">    if orientation == &#39;vertical&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="93">
+          
+          
+          <code class="ruby">      grab_vertical_coordinates(coord_1)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="94">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="95">
+          
+          
+          <code class="ruby">      grab_horizontal_coordinates(coord_1)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="99">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def grab_vertical_coordinates(coord_1)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="100">
+          
+          
+          <code class="ruby">    row_1, column_1 = coord_1.chars</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="101">
+          
+          
+          <code class="ruby">    if row_1 == &quot;A&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="102">
+          
+          
+          <code class="ruby">      coord_1_index = @possible_firing_locations.index(coord_1)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="103">
+          
+          
+          <code class="ruby">      coord_2 = @possible_firing_locations[coord_1_index + 8]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="104">
+          
+          
+          <code class="ruby">      middle_coord = @possible_firing_locations[coord_1_index + 4]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="105">
+          
+          
+          <code class="ruby">      check_for_duplicates(middle_coord) ? pick_coordinate_set(@ship_2) : true</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="106">
+          
+          
+          <code class="ruby">      check_for_duplicates(coord_2) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="107">
+          
+          
+          <code class="ruby">    elsif row_1 == &quot;D&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="108">
+          
+          
+          <code class="ruby">      coord_1_index = @possible_firing_locations.index(coord_1)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="109">
+          
+          
+          <code class="ruby">      coord_2 = @possible_firing_locations[coord_1_index - 8]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="110">
+          
+          
+          <code class="ruby">      middle_coord = @possible_firing_locations[coord_1_index - 4]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="111">
+          
+          
+          <code class="ruby">      check_for_duplicates(middle_coord) ? pick_coordinate_set(@ship_2) : true</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="112">
+          
+          
+          <code class="ruby">      check_for_duplicates(coord_2) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="113">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="114">
+          
+          
+          <code class="ruby">      coord_1_index = @possible_firing_locations.index(coord_1)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="115">
+          
+          
+          <code class="ruby">      coord_1_new = @possible_firing_locations[coord_1_index - 4]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="116">
+          
+          
+          <code class="ruby">      check_for_duplicates(coord_1_new) ? pick_coordinate_set(@ship_2) : @coord_1 = coord_1_new</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="117">
+          
+          
+          <code class="ruby">      coord_2_new = @possible_firing_locations[coord_1_index + 4]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="118">
+          
+          
+          <code class="ruby">      check_for_duplicates(coord_2_new) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2_new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="120">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="121">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="122">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def grab_horizontal_coordinates(coord_1)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="123">
+          
+          
+          <code class="ruby">    row_1, column_1 = coord_1.chars</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="124">
+          
+          
+          <code class="ruby">    if column_1 == &quot;1&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="125">
+          
+          
+          <code class="ruby">      coord_1_index = @possible_firing_locations.index(coord_1)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="126">
+          
+          
+          <code class="ruby">      coord_2 = @possible_firing_locations[coord_1_index + 2]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="127">
+          
+          
+          <code class="ruby">      middle_coord = @possible_firing_locations[coord_1_index + 1]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="128">
+          
+          
+          <code class="ruby">      check_for_duplicates(middle_coord) ? pick_coordinate_set(@ship_2) : true</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="129">
+          
+          
+          <code class="ruby">      check_for_duplicates(coord_2) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="130">
+          
+          
+          <code class="ruby">    elsif column_1 == &quot;4&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="131">
+          
+          
+          <code class="ruby">      coord_1_index = @possible_firing_locations.index(coord_1)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="132">
+          
+          
+          <code class="ruby">      coord_2 = @possible_firing_locations[coord_1_index - 2]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="133">
+          
+          
+          <code class="ruby">      middle_coord = @possible_firing_locations[coord_1_index - 1]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="134">
+          
+          
+          <code class="ruby">      check_for_duplicates(middle_coord) ? pick_coordinate_set(@ship_2) : true</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="135">
+          
+          
+          <code class="ruby">      check_for_duplicates(coord_2) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="136">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="137">
+          
+          
+          <code class="ruby">      coord_1_index = @possible_firing_locations.index(coord_1)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="138">
+          
+          
+          <code class="ruby">      coord_1_new = @possible_firing_locations[coord_1_index - 1]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="139">
+          
+          
+          <code class="ruby">      check_for_duplicates(coord_1_new) ? pick_coordinate_set(@ship_2) : @coord_1 = coord_1_new</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="140">
+          
+          
+          <code class="ruby">      coord_2_new = @possible_firing_locations[coord_1_index + 1]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="141">
+          
+          
+          <code class="ruby">      check_for_duplicates(coord_2_new) ? pick_coordinate_set(@ship_2) : @coord_2 = coord_2_new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="142">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="143">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="144">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="145">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def place_ships_on_board(board = @ship_board)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="146">
+          
+          
+          <code class="ruby">    @fleet.each do |ship|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="147">
+          
+          
+          <code class="ruby">      pick_coordinate_set(ship)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="148">
+          
+          
+          <code class="ruby">      coords = @coord_1 + &quot; &quot; + @coord_2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="149">
+          
+          
+          <code class="ruby">      @currently_used_coordinates &lt;&lt; @coord_1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="150">
+          
+          
+          <code class="ruby">      @currently_used_coordinates &lt;&lt; @coord_2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="151">
+          
+          
+          <code class="ruby">      @current_ship_placements &lt;&lt; coords</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="152">
+          
+          
+          <code class="ruby">      board.insert(ship, coords)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="153">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="154">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="155">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="156">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def fire</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="157">
+          
+          
+          <code class="ruby">    @shots += 1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="158">
+          
+          
+          <code class="ruby">    coords = choose_firing_coordinates</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="159">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="160">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="161">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def choose_firing_coordinates</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="162">
+          
+          
+          <code class="ruby">    @possible_firing_locations.shuffle.shift</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="163">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="164">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="165">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def all_ships_sunk?</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="166">
+          
+          
+          <code class="ruby">    @ship_1.sunk? &amp;&amp; @ship_2.sunk? ? true : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="167">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="168">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="44d27dea47ad60063bc7860db3610637f4b9c7f2">
+  <div class="header">
+    <h3>lib/player.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>29</b> relevant lines. 
+      <span class="green"><b>29</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/ship.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/ledger.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/messages.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/firing_rules.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;pry&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Player</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  include FiringRules</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_reader :ship_board,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">              :shots_fired,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">              :collection,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">              :fleet,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">              :shots,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">              :fired_coords</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="17">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @ship_board = Ledger.new</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="18">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @shots_fired = Ledger.new</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="19">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @collection = [@ship_board, @shots_fired]</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="20">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @ship_1 = Ship.new(2)</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="21">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @ship_2 = Ship.new(3)</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="22">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @fleet = [@ship_1, @ship_2]</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="23">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @shots = 0</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="24">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    @fired_coords = []</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def place_ship(ship, coords, board = @ship_board)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="28">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    board.insert(ship, coords)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def fire(board, coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="15" data-linenumber="32">
+          <span class="hits">15</span>
+          
+          <code class="ruby">    valid_firing_coords?(coords) ? @shots += 1 : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def valid_firing_coords?(coords)</code>
+        </li>
+      
+        <li class="covered" data-hits="15" data-linenumber="36">
+          <span class="hits">15</span>
+          
+          <code class="ruby">    if fired_already?(coords) || FiringRules.coords_exist?(coords) == false</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="37">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="39">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @fired_coords &lt;&lt; coords</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def all_ships_sunk?</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="44">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @ship_1.sunk? &amp;&amp; @ship_2.sunk? ? true : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def fired_already?(coord)</code>
+        </li>
+      
+        <li class="covered" data-hits="18" data-linenumber="48">
+          <span class="hits">18</span>
+          
+          <code class="ruby">    @fired_coords.include?(coord)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="17c0619a984948e85799f53c692de4b5fce2176a">
   <div class="header">
     <h3>lib/ship.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="green">94.74 %</span> covered</h4>
     <div>
       <b>19</b> relevant lines. 
-      <span class="green"><b>19</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="green"><b>18</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -108,26 +3756,26 @@
           <code class="ruby">  def initialize(size)</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="4">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="56" data-linenumber="4">
+          <span class="hits">56</span>
           
           <code class="ruby">    @size = size</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="5">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="56" data-linenumber="5">
+          <span class="hits">56</span>
           
           <code class="ruby">    @placed = false</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="6">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="56" data-linenumber="6">
+          <span class="hits">56</span>
           
           <code class="ruby">    @hit_counter = 0</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="7">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="56" data-linenumber="7">
+          <span class="hits">56</span>
           
           <code class="ruby">    @sunk = false</code>
         </li>
@@ -150,8 +3798,8 @@
           <code class="ruby">  def placed?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="11">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="11">
+          <span class="hits">4</span>
           
           <code class="ruby">    @placed</code>
         </li>
@@ -174,8 +3822,8 @@
           <code class="ruby">  def place_on_board</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="7" data-linenumber="15">
+          <span class="hits">7</span>
           
           <code class="ruby">    @placed = true</code>
         </li>
@@ -198,8 +3846,8 @@
           <code class="ruby">  def times_hit</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="19">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
           
           <code class="ruby">    @hit_counter</code>
         </li>
@@ -222,14 +3870,14 @@
           <code class="ruby">  def hit</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="23">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="5" data-linenumber="23">
+          <span class="hits">5</span>
           
           <code class="ruby">    @hit_counter += 1</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="24">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="5" data-linenumber="24">
+          <span class="hits">5</span>
           
           <code class="ruby">    if @hit_counter == @size</code>
         </li>
@@ -264,8 +3912,8 @@
           <code class="ruby">  def sunk?</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="30">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="30">
+          <span class="hits">3</span>
           
           <code class="ruby">    @sunk</code>
         </li>
