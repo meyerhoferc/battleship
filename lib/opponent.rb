@@ -5,7 +5,6 @@ require './lib/coordinate_rules.rb'
 require 'pry'
 
 class Opponent
-  # include CoordinateRules
   attr_reader :ship_board,
               :shots_fired,
               :collection,

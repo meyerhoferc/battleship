@@ -4,9 +4,7 @@ require './lib/coordinate_rules.rb'
 require 'pry'
 
 class Ledger
-
   include CoordinateRules
-
   attr_reader :difficulty,
               :board
 
